@@ -1,0 +1,345 @@
+,text,score,output,ground_truth_output,Attacked
+0,[[[[Premise]]]]: This church choir sings to the masses as they sing joyous songs from the book at a church.<SPLIT>[[[[Hypothesis]]]]: The church is filled with [[song]].,0.0744387507438659,0.0,0.0,0
+1,[[[[Premise]]]]: This church choir sings to the masses as they sing joyous songs from the book at a church.<SPLIT>[[[[Hypothesis]]]]: [[A]] [[choir]] [[singing]] at a [[baseball]] game.,0.0069467425346374,2.0,2.0,0
+2,"[[[[Premise]]]]: A woman with a green headscarf, blue shirt and a very big grin.<SPLIT>[[[[Hypothesis]]]]: The woman is [[young]].",0.041418969631195,1.0,1.0,0
+3,"[[[[Premise]]]]: A woman with a green headscarf, blue shirt and a very big grin.<SPLIT>[[[[Hypothesis]]]]: The [[woman]] is very happy.",0.4409109950065613,0.0,0.0,0
+4,[[[[Premise]]]]: An old man with a package poses in front of an advertisement.<SPLIT>[[[[Hypothesis]]]]: A man poses in [[front]] of an [[ad]].,0.0188676714897155,0.0,0.0,0
+5,[[[[Premise]]]]: An old man with a package poses in front of an advertisement.<SPLIT>[[[[Hypothesis]]]]: A man [[poses]] in front of an [[ad]] for [[beer]].,0.0139639377593994,1.0,1.0,0
+6,[[[[Premise]]]]: An old man with a package poses in front of an advertisement.<SPLIT>[[[[Hypothesis]]]]: A man [[walks]] by an ad.,0.2977007627487182,2.0,2.0,0
+7,[[[[Premise]]]]: A statue at a museum that no seems to be looking at.<SPLIT>[[[[Hypothesis]]]]: The statue is offensive and people are mad that it is on [[display]].,0.4257894158363342,1.0,1.0,0
+8,[[[[Premise]]]]: A statue at a museum that no seems to be looking at.<SPLIT>[[[[Hypothesis]]]]: There is a statue that not many [[people]] [[seem]] to be interested in.,0.3885364532470703,0.0,0.0,0
+9,[[[[Premise]]]]: A land rover is being driven across a river.<SPLIT>[[[[Hypothesis]]]]: A vehicle is crossing a [[river]].,0.0215421319007873,0.0,0.0,0
+10,[[[[Premise]]]]: A land rover is being driven across a river.<SPLIT>[[[[Hypothesis]]]]: A [[sedan]] is [[stuck]] in the middle of a river.,0.1283854842185974,2.0,2.0,0
+11,[[[[Premise]]]]: A man playing an electric guitar on stage.<SPLIT>[[[[Hypothesis]]]]: A man playing [[banjo]] on the [[floor]].,0.0019522905349731,2.0,2.0,0
+12,[[[[Premise]]]]: A man playing an electric guitar on stage.<SPLIT>[[[[Hypothesis]]]]: A man playing guitar on [[stage]].,0.0321707129478454,0.0,0.0,0
+13,[[[[Premise]]]]: A man playing an electric guitar on stage.<SPLIT>[[[[Hypothesis]]]]: A man is performing for [[cash]].,0.0181630253791809,1.0,1.0,0
+14,[[[[Premise]]]]: A blond-haired doctor and her African american assistant looking threw new medical manuals.<SPLIT>[[[[Hypothesis]]]]: A [[man]] is [[eating]] pb and j,0.0011324882507324,2.0,2.0,0
+15,"[[[[Premise]]]]: One tan girl with a wool hat is running and leaning over an object, while another person in a wool hat is sitting on the ground.<SPLIT>[[[[Hypothesis]]]]: A [[boy]] runs into a wall",0.0022948384284973,2.0,2.0,0
+16,"[[[[Premise]]]]: One tan girl with a wool hat is running and leaning over an object, while another person in a wool hat is sitting on the ground.<SPLIT>[[[[Hypothesis]]]]: A tan girl runs [[leans]] over an object",0.0468556880950927,0.0,0.0,0
+17,[[[[Premise]]]]: A young family enjoys feeling ocean waves lap at their feet.<SPLIT>[[[[Hypothesis]]]]: A young man and woman take their child to the [[beach]] for the first [[time]].,0.0820886492729187,1.0,1.0,0
+18,[[[[Premise]]]]: A young family enjoys feeling ocean waves lap at their feet.<SPLIT>[[[[Hypothesis]]]]: A family is out at a [[restaurant]].,0.0266876816749572,2.0,2.0,0
+19,[[[[Premise]]]]: A young family enjoys feeling ocean waves lap at their feet.<SPLIT>[[[[Hypothesis]]]]: [[A]] [[family]] is at the beach.,0.2313820719718933,0.0,0.0,0
+20,[[[[Premise]]]]: A couple walk hand in hand down a street.<SPLIT>[[[[Hypothesis]]]]: A [[couple]] is walking together.,0.0349248647689819,0.0,0.0,0
+21,[[[[Premise]]]]: A couple walk hand in hand down a street.<SPLIT>[[[[Hypothesis]]]]: The [[couple]] is [[married]].,0.0078710317611694,1.0,1.0,0
+22,[[[[Premise]]]]: A couple walk hand in hand down a street.<SPLIT>[[[[Hypothesis]]]]: A couple is [[sitting]] on a [[bench]].,0.0012347698211669,2.0,2.0,0
+23,[[[[Premise]]]]: 3 young man in hoods standing in the middle of a quiet street facing the camera.<SPLIT>[[[[Hypothesis]]]]: Three [[people]] [[sit]] by a busy street bareheaded.,0.0027300715446472,2.0,2.0,0
+24,[[[[Premise]]]]: 3 young man in hoods standing in the middle of a quiet street facing the camera.<SPLIT>[[[[Hypothesis]]]]: Three hood wearing people stand in a [[street]].,0.044252872467041,0.0,0.0,0
+25,[[[[Premise]]]]: A man reads the paper in a bar with green lighting.<SPLIT>[[[[Hypothesis]]]]: The man is [[inside]].,0.0464267134666442,0.0,0.0,0
+26,[[[[Premise]]]]: A man reads the paper in a bar with green lighting.<SPLIT>[[[[Hypothesis]]]]: The [[man]] is reading the sportspage.,0.2046475410461425,1.0,1.0,0
+27,[[[[Premise]]]]: A man reads the paper in a bar with green lighting.<SPLIT>[[[[Hypothesis]]]]: The man is [[climbing]] a [[mountain]].,0.0009955763816833,2.0,2.0,0
+28,[[[[Premise]]]]: Three firefighter come out of subway station.<SPLIT>[[[[Hypothesis]]]]: Three [[firefighters]] coming up from a subway station.,0.0586839914321899,0.0,0.0,0
+29,[[[[Premise]]]]: Three firefighter come out of subway station.<SPLIT>[[[[Hypothesis]]]]: Three firefighters [[playing]] [[cards]] inside a fire station.,0.198481798171997,2.0,2.0,0
+30,"[[[[Premise]]]]: A person wearing a straw hat, standing outside working a steel apparatus with a pile of coconuts on the ground.<SPLIT>[[[[Hypothesis]]]]: A person is [[near]] a [[pile]] of coconuts.",0.0178794264793396,0.0,0.0,0
+31,"[[[[Premise]]]]: A person wearing a straw hat, standing outside working a steel apparatus with a pile of coconuts on the ground.<SPLIT>[[[[Hypothesis]]]]: A person is [[selling]] [[coconuts]].",0.2957205176353454,1.0,1.0,0
+32,"[[[[Premise]]]]: A person wearing a straw hat, standing outside working a steel apparatus with a pile of coconuts on the ground.<SPLIT>[[[[Hypothesis]]]]: A person is [[burning]] a straw hat.",0.2808164954185486,2.0,2.0,0
+33,[[[[Premise]]]]: Male in a blue jacket decides to lay in the grass.<SPLIT>[[[[Hypothesis]]]]: The guy in [[yellow]] is [[rolling]] on the grass,0.0048072338104248,2.0,2.0,0
+34,[[[[Premise]]]]: Male in a blue jacket decides to lay in the grass.<SPLIT>[[[[Hypothesis]]]]: The guy wearing a [[blue]] jacket is laying on the green [[grass]] taking a [[nap]].,0.0096654295921325,1.0,1.0,0
+35,[[[[Premise]]]]: During calf roping a cowboy calls off his horse.<SPLIT>[[[[Hypothesis]]]]: A first [[time]] roper falls off his [[horse]].,0.1438139081001281,1.0,1.0,0
+36,[[[[Premise]]]]: A little boy in a gray and white striped sweater and tan pants is playing on a piece of playground equipment.<SPLIT>[[[[Hypothesis]]]]: A boy is on a [[playground]].,0.0163397789001464,0.0,0.0,0
+37,[[[[Premise]]]]: A little boy in a gray and white striped sweater and tan pants is playing on a piece of playground equipment.<SPLIT>[[[[Hypothesis]]]]: The [[boy]] is [[playing]] on the swings after [[school]].,0.0124049186706542,1.0,1.0,0
+38,[[[[Premise]]]]: A little boy in a gray and white striped sweater and tan pants is playing on a piece of playground equipment.<SPLIT>[[[[Hypothesis]]]]: The [[boy]] is [[sitting]] on the school [[bus]] on his way home.,0.0031580924987792,2.0,2.0,0
+39,[[[[Premise]]]]: A woman wearing a ball cap squats down to touch the cracked earth.<SPLIT>[[[[Hypothesis]]]]: An [[archeologist]] wearing a hat [[squats]] to examine the [[site]] for a [[dig]],0.0080336332321167,1.0,1.0,0
+40,[[[[Premise]]]]: A woman wearing a ball cap squats down to touch the cracked earth.<SPLIT>[[[[Hypothesis]]]]: A squatting woman wearing a hat [[touching]] the [[ground]].,0.0484859347343444,0.0,0.0,0
+41,[[[[Premise]]]]: A woman wearing a ball cap squats down to touch the cracked earth.<SPLIT>[[[[Hypothesis]]]]: A woman [[wearing]] a sun [[bonnet]] planting a [[garden]].,0.0325178503990173,2.0,2.0,0
+42,[[[[Premise]]]]: Two children re laying on a rug with some wooden bricks laid out in a square between them.<SPLIT>[[[[Hypothesis]]]]: Two children are [[playing]] [[catch]] at a park.,0.0062536001205444,2.0,2.0,0
+43,[[[[Premise]]]]: Two children re laying on a rug with some wooden bricks laid out in a square between them.<SPLIT>[[[[Hypothesis]]]]: Two children are on a [[rug]].,0.0174949169158935,0.0,0.0,0
+44,[[[[Premise]]]]: A man standing in front of a building on the phone as two men to the side pain on the side.<SPLIT>[[[[Hypothesis]]]]: a [[guy]] [[near]] a building stands by two other men,0.034519076347351,0.0,0.0,0
+45,[[[[Premise]]]]: A man standing in front of a building on the phone as two men to the side pain on the side.<SPLIT>[[[[Hypothesis]]]]: two [[girls]] [[walk]] through a [[hall]],0.0008832812309265,2.0,2.0,0
+46,[[[[Premise]]]]: A man standing in front of a building on the phone as two men to the side pain on the side.<SPLIT>[[[[Hypothesis]]]]: a busy [[man]] stands with [[bodyguards]],0.0865548253059387,1.0,1.0,0
+47,"[[[[Premise]]]]: The two young girls are dressed as fairies, and are playing in the leaves outdoors.<SPLIT>[[[[Hypothesis]]]]: [[Girls]] are playing outdoors.",0.0187886953353881,0.0,0.0,0
+48,"[[[[Premise]]]]: The two young girls are dressed as fairies, and are playing in the leaves outdoors.<SPLIT>[[[[Hypothesis]]]]: Two girls play dress up [[indoors]].",0.0151875019073486,2.0,2.0,0
+49,"[[[[Premise]]]]: The two young girls are dressed as fairies, and are playing in the leaves outdoors.<SPLIT>[[[[Hypothesis]]]]: The two girls play in the [[Autumn]].",0.0365007519721984,1.0,1.0,0
+50,[[[[Premise]]]]: People jump over a mountain crevasse on a rope.<SPLIT>[[[[Hypothesis]]]]: Some people look visually [[afraid]] to jump.,0.3268123865127563,1.0,1.0,0
+51,[[[[Premise]]]]: People jump over a mountain crevasse on a rope.<SPLIT>[[[[Hypothesis]]]]: [[People]] are jumping outside.,0.0288634300231933,0.0,0.0,0
+52,[[[[Premise]]]]: People jump over a mountain crevasse on a rope.<SPLIT>[[[[Hypothesis]]]]: [[People]] slide over a mountain crevasse on a slide.,0.1826992630958557,2.0,2.0,0
+53,[[[[Premise]]]]: A snowboarder on a wide plain of snow<SPLIT>[[[[Hypothesis]]]]: A snow field with a [[snowboarder]] on it,0.1886124610900879,0.0,0.0,0
+54,[[[[Premise]]]]: An older women tending to a garden.<SPLIT>[[[[Hypothesis]]]]: The lady is [[cooking]] [[dinner]],0.002102255821228,2.0,2.0,0
+55,[[[[Premise]]]]: An older women tending to a garden.<SPLIT>[[[[Hypothesis]]]]: The lady is [[weeding]] her garden,0.4107722043991089,1.0,1.0,0
+56,[[[[Premise]]]]: An older women tending to a garden.<SPLIT>[[[[Hypothesis]]]]: The lady has a [[garden]],0.050748586654663,0.0,0.0,0
+57,[[[[Premise]]]]: A man in a black shirt overlooking bike maintenance.<SPLIT>[[[[Hypothesis]]]]: A man [[destroys]] a bike.,0.0666156411170959,2.0,2.0,0
+58,[[[[Premise]]]]: A man in a black shirt overlooking bike maintenance.<SPLIT>[[[[Hypothesis]]]]: A [[man]] watches [[bike]] repairs.,0.4414165019989013,0.0,0.0,0
+59,[[[[Premise]]]]: A man in a black shirt overlooking bike maintenance.<SPLIT>[[[[Hypothesis]]]]: A man [[learns]] bike maintenance.,0.1854315996170044,1.0,1.0,0
+60,[[[[Premise]]]]: A man in a black shirt is looking at a bike in a workshop.<SPLIT>[[[[Hypothesis]]]]: A man is [[wearing]] a red [[shirt]],0.0028437376022338,2.0,2.0,0
+61,[[[[Premise]]]]: A man in a black shirt is looking at a bike in a workshop.<SPLIT>[[[[Hypothesis]]]]: A man is in a black [[shirt]],0.0473645329475402,0.0,0.0,0
+62,[[[[Premise]]]]: A man in a black shirt is looking at a bike in a workshop.<SPLIT>[[[[Hypothesis]]]]: A [[man]] is [[deciding]] which bike to [[buy]],0.0423826575279235,1.0,1.0,0
+63,[[[[Premise]]]]: A man looking over a bicycle's rear wheel in the maintenance garage with various tools visible in the background.<SPLIT>[[[[Hypothesis]]]]: A person is in a [[garage]].,0.0204421877861022,0.0,0.0,0
+64,[[[[Premise]]]]: A man looking over a bicycle's rear wheel in the maintenance garage with various tools visible in the background.<SPLIT>[[[[Hypothesis]]]]: [[A]] man repairs bicycles.,0.2939575910568237,0.0,0.0,0
+65,"[[[[Premise]]]]: Three people sit on a bench at a station, the man looks oddly at the two women, the redheaded women looks up and forward in an awkward position, and the yellow blond girl twiddles with her hair.<SPLIT>[[[[Hypothesis]]]]: Some people [[stand]] around.",0.0100871324539184,2.0,2.0,0
+66,"[[[[Premise]]]]: Three people sit on a bench at a station, the man looks oddly at the two women, the redheaded women looks up and forward in an awkward position, and the yellow blond girl twiddles with her hair.<SPLIT>[[[[Hypothesis]]]]: People [[run]] together.",0.0032854080200195,2.0,2.0,0
+67,"[[[[Premise]]]]: Three people sit on a bench at a station, the man looks oddly at the two women, the redheaded women looks up and forward in an awkward position, and the yellow blond girl twiddles with her hair.<SPLIT>[[[[Hypothesis]]]]: [[People]] wait at a station.",0.0478303432464599,0.0,0.0,0
+68,[[[[Premise]]]]: A child wearing a red top is standing behind a blond headed child sitting in a wheelbarrow.<SPLIT>[[[[Hypothesis]]]]: A [[child]] [[wearing]] a red top is standing behind a blond headed child,0.0375821590423584,0.0,0.0,0
+69,[[[[Premise]]]]: A child wearing a red top is standing behind a blond headed child sitting in a wheelbarrow.<SPLIT>[[[[Hypothesis]]]]: A child wearing a red top is [[standing]] on top of a blond headed child,0.4447396993637085,2.0,2.0,0
+70,[[[[Premise]]]]: A child wearing a red top is standing behind a blond headed child sitting in a wheelbarrow.<SPLIT>[[[[Hypothesis]]]]: A child wearing a red top is standing behind a [[pretty]] blond headed child,0.0467655658721923,1.0,1.0,0
+71,"[[[[Premise]]]]: A person dressed in a dress with flowers and a stuffed bee attached to it, is pushing a baby stroller down the street.<SPLIT>[[[[Hypothesis]]]]: An [[old]] lady pushing a stroller down a busy [[street]].",0.0073771476745605,1.0,1.0,0
+72,"[[[[Premise]]]]: A person dressed in a dress with flowers and a stuffed bee attached to it, is pushing a baby stroller down the street.<SPLIT>[[[[Hypothesis]]]]: A person outside pushing a [[stroller]].",0.0182844996452331,0.0,0.0,0
+73,[[[[Premise]]]]: A dog jumping for a Frisbee in the snow.<SPLIT>[[[[Hypothesis]]]]: A [[pet]] is enjoying a game of fetch with his [[owner]].,0.0459837913513183,1.0,1.0,0
+74,[[[[Premise]]]]: A dog jumping for a Frisbee in the snow.<SPLIT>[[[[Hypothesis]]]]: A [[cat]] [[washes]] his face and whiskers with his front paw.,0.00068199634552,2.0,2.0,0
+75,"[[[[Premise]]]]: A dog jumping for a Frisbee in the snow.<SPLIT>[[[[Hypothesis]]]]: An [[animal]] is outside in the cold weather, playing with a plastic toy.",0.0809806585311889,0.0,0.0,0
+76,[[[[Premise]]]]: People are conversing at a dining table under a canopy.<SPLIT>[[[[Hypothesis]]]]: People at a party are seated for [[dinner]] on the lawn.,0.4975411891937256,1.0,1.0,0
+77,[[[[Premise]]]]: People are conversing at a dining table under a canopy.<SPLIT>[[[[Hypothesis]]]]: People are talking underneath a [[covering]].,0.1116993427276611,0.0,0.0,0
+78,[[[[Premise]]]]: People are conversing at a dining table under a canopy.<SPLIT>[[[[Hypothesis]]]]: [[People]] are [[screaming]] at a [[boxing]] match.,0.0017902851104736,2.0,2.0,0
+79,[[[[Premise]]]]: A girl playing a violin along with a group of people<SPLIT>[[[[Hypothesis]]]]: A [[girl]] is [[washing]] a load of [[laundry]].,0.0007001161575317,2.0,2.0,0
+80,[[[[Premise]]]]: A girl playing a violin along with a group of people<SPLIT>[[[[Hypothesis]]]]: A girl is playing an [[instrument]].,0.0153100490570068,0.0,0.0,0
+81,[[[[Premise]]]]: A girl playing a violin along with a group of people<SPLIT>[[[[Hypothesis]]]]: A group of [[people]] are playing in a [[symphony]].,0.1718138456344604,1.0,1.0,0
+82,[[[[Premise]]]]: A woman within an orchestra is playing a violin.<SPLIT>[[[[Hypothesis]]]]: A woman is playing a [[concert]].,0.0877814292907714,1.0,1.0,0
+83,[[[[Premise]]]]: A woman within an orchestra is playing a violin.<SPLIT>[[[[Hypothesis]]]]: A woman is [[playing]] the violin.,0.0353785157203674,0.0,0.0,0
+84,"[[[[Premise]]]]: Three men, one holding pipes, another holding a large object above his head, and one resting against the pipe bed on the truck, are looking at the camera.<SPLIT>[[[[Hypothesis]]]]: three [[men]] going to [[work]]",0.0295428037643432,1.0,1.0,0
+85,"[[[[Premise]]]]: Three men, one holding pipes, another holding a large object above his head, and one resting against the pipe bed on the truck, are looking at the camera.<SPLIT>[[[[Hypothesis]]]]: three men look at the [[camera]]",0.0310767292976379,0.0,0.0,0
+86,"[[[[Premise]]]]: Three men, one holding pipes, another holding a large object above his head, and one resting against the pipe bed on the truck, are looking at the camera.<SPLIT>[[[[Hypothesis]]]]: three men [[sleeping]] in a [[tent]]",0.0048661828041076,2.0,2.0,0
+87,[[[[Premise]]]]: A Ford car is making a right turn as 3 males are walking across the street behind the car.<SPLIT>[[[[Hypothesis]]]]: A car making a right turn [[had]] three pedestrians cross behind it.,0.4338976144790649,0.0,0.0,0
+88,[[[[Premise]]]]: Three boys in white shirts are walking behind an older model Ford car.<SPLIT>[[[[Hypothesis]]]]: there are three [[boys]],0.0092245936393737,0.0,0.0,0
+89,[[[[Premise]]]]: Three boys in white shirts are walking behind an older model Ford car.<SPLIT>[[[[Hypothesis]]]]: There are three [[girls]],0.0026183724403381,2.0,2.0,0
+90,[[[[Premise]]]]: Three girls blow out the candles of a cake made of Peeps.<SPLIT>[[[[Hypothesis]]]]: Some [[people]] are blowing out candles,0.2550817728042602,0.0,0.0,0
+91,[[[[Premise]]]]: Three girls blow out the candles of a cake made of Peeps.<SPLIT>[[[[Hypothesis]]]]: There are three [[girls]] and a cake,0.0185917019844055,0.0,0.0,0
+92,[[[[Premise]]]]: Three girls blow out the candles of a cake made of Peeps.<SPLIT>[[[[Hypothesis]]]]: There are peeps in the [[garden]].,0.5308880805969238,2.0,2.0,0
+93,[[[[Premise]]]]: A crowd of people looking up at 3 people on the edge of the roof of a building.<SPLIT>[[[[Hypothesis]]]]: The [[crowd]] is [[calling]] for [[help]] for the people on the [[roof]].,0.06882905960083,1.0,1.0,0
+94,[[[[Premise]]]]: A crowd of people looking up at 3 people on the edge of the roof of a building.<SPLIT>[[[[Hypothesis]]]]: Three people are [[climbing]] down the ladder on the building.,0.0271228551864624,2.0,2.0,0
+95,[[[[Premise]]]]: A woman working long hours.<SPLIT>[[[[Hypothesis]]]]: A woman is working in a [[factory]].,0.0207126140594482,1.0,1.0,0
+96,[[[[Premise]]]]: A woman working long hours.<SPLIT>[[[[Hypothesis]]]]: A woman is [[working]].,0.0295822024345397,0.0,0.0,0
+97,[[[[Premise]]]]: A woman working long hours.<SPLIT>[[[[Hypothesis]]]]: A woman is [[sleeping]].,0.00165855884552,2.0,2.0,0
+98,[[[[Premise]]]]: Two teenage girls conversing next to lockers.<SPLIT>[[[[Hypothesis]]]]: Girls talking next to the [[toilet]].,0.1770175099372863,2.0,2.0,0
+99,[[[[Premise]]]]: Two teenage girls conversing next to lockers.<SPLIT>[[[[Hypothesis]]]]: [[People]] talking next to lockers.,0.0216756463050842,0.0,0.0,0
+100,[[[[Premise]]]]: Two teenage girls conversing next to lockers.<SPLIT>[[[[Hypothesis]]]]: [[Girls]] [[talking]] about their [[problems]] next to [[lockers]].,0.0079468488693237,1.0,1.0,0
+101,[[[[Premise]]]]: An old woman watches a man look down at some balls on the ground.<SPLIT>[[[[Hypothesis]]]]: An elderly female is [[stalking]] a male.,0.4232378005981445,1.0,1.0,0
+102,"[[[[Premise]]]]: Two children, both wearing tan coats, are embracing one another.<SPLIT>[[[[Hypothesis]]]]: Two kids are [[hugging]] after surviving a horrible car wreck.",0.0244941711425781,1.0,1.0,0
+103,"[[[[Premise]]]]: Two children, both wearing tan coats, are embracing one another.<SPLIT>[[[[Hypothesis]]]]: Two kids are [[hugging]].",0.0156090259552001,0.0,0.0,0
+104,"[[[[Premise]]]]: Two children, both wearing tan coats, are embracing one another.<SPLIT>[[[[Hypothesis]]]]: Two kids are [[running]] down a highway.",0.0025990009307861,2.0,2.0,0
+105,[[[[Premise]]]]: 2 kids who look related are hanging out with 1 of them looking very emotional and hugging the other.<SPLIT>[[[[Hypothesis]]]]: A couple of child relatives were [[hugging]] [[because]] they were [[happy]] to see [[each]] other.,0.0368155837059021,1.0,1.0,0
+106,[[[[Premise]]]]: 2 kids who look related are hanging out with 1 of them looking very emotional and hugging the other.<SPLIT>[[[[Hypothesis]]]]: Two [[kids]] were hugging.,0.1175590753555297,0.0,0.0,0
+107,[[[[Premise]]]]: 2 kids who look related are hanging out with 1 of them looking very emotional and hugging the other.<SPLIT>[[[[Hypothesis]]]]: Two youths were [[pushing]] each other.,0.3928218483924866,2.0,2.0,0
+108,[[[[Premise]]]]: A large number of people wearing only white and red are walking on a street.<SPLIT>[[[[Hypothesis]]]]: A large number of people wearing [[black]] walking down the street.,0.0089479088783264,2.0,2.0,0
+109,[[[[Premise]]]]: A large number of people wearing only white and red are walking on a street.<SPLIT>[[[[Hypothesis]]]]: A large number of [[men]] walking down the street in red and white.,0.033533751964569,1.0,1.0,0
+110,[[[[Premise]]]]: A large number of people wearing only white and red are walking on a street.<SPLIT>[[[[Hypothesis]]]]: A large number of people walking on a [[street]].,0.0245379209518432,0.0,0.0,0
+111,[[[[Premise]]]]: A guy riding a motorcycle near junk cars<SPLIT>[[[[Hypothesis]]]]: The man is test driving a [[motorcycle]] to decide whether or not he will buy it.,0.0605211853981018,1.0,1.0,0
+112,[[[[Premise]]]]: A guy riding a motorcycle near junk cars<SPLIT>[[[[Hypothesis]]]]: A man is riding a [[motorcycle]].,0.0132712721824646,0.0,0.0,0
+113,[[[[Premise]]]]: A guy riding a motorcycle near junk cars<SPLIT>[[[[Hypothesis]]]]: A man is sitting on a parked motorcycle [[waiting]] for his friend.,0.2491800189018249,2.0,2.0,0
+114,"[[[[Premise]]]]: Women of India performing with blue streamers, in beautiful blue costumes.<SPLIT>[[[[Hypothesis]]]]: indian women perform together in gorgeous [[costumes]]",0.2432792782783508,0.0,0.0,0
+115,"[[[[Premise]]]]: Women of India performing with blue streamers, in beautiful blue costumes.<SPLIT>[[[[Hypothesis]]]]: [[dogs]] sniff the air",0.0034027695655822,2.0,2.0,0
+116,"[[[[Premise]]]]: Women of India performing with blue streamers, in beautiful blue costumes.<SPLIT>[[[[Hypothesis]]]]: indian women are [[performing]] a [[religious]] ritual together",0.0184775590896606,1.0,1.0,0
+117,[[[[Premise]]]]: A professional swimmer spits water out after surfacing while grabbing the hand of someone helping him back to land.<SPLIT>[[[[Hypothesis]]]]: A [[person]] is swimming.,0.0417787432670593,0.0,0.0,0
+118,[[[[Premise]]]]: A professional swimmer spits water out after surfacing while grabbing the hand of someone helping him back to land.<SPLIT>[[[[Hypothesis]]]]: The swimmer is [[eating]] a toasted [[marshmallow]].,0.0040067434310913,2.0,2.0,0
+119,[[[[Premise]]]]: A professional swimmer spits water out after surfacing while grabbing the hand of someone helping him back to land.<SPLIT>[[[[Hypothesis]]]]: The [[swimmer]] almost [[drowned]] after being sucked under a fast [[current]].,0.0342225432395935,1.0,1.0,0
+120,[[[[Premise]]]]: The man in the black wetsuit is walking out of the water.<SPLIT>[[[[Hypothesis]]]]: A man in a wetsuit walks out of the water [[carrying]] a [[surfboard]].,0.0261728763580322,1.0,1.0,0
+121,[[[[Premise]]]]: The man in the black wetsuit is walking out of the water.<SPLIT>[[[[Hypothesis]]]]: a [[person]] is walking out of water.,0.0202507972717285,0.0,0.0,0
+122,[[[[Premise]]]]: The man in the black wetsuit is walking out of the water.<SPLIT>[[[[Hypothesis]]]]: A man is [[laying]] on the beach.,0.0017129778861999,2.0,2.0,0
+123,[[[[Premise]]]]: Five girls and two guys are crossing a overpass.<SPLIT>[[[[Hypothesis]]]]: The extended family hike together on their family [[reunion]].,0.0545486211776733,1.0,1.0,0
+124,[[[[Premise]]]]: Five girls and two guys are crossing a overpass.<SPLIT>[[[[Hypothesis]]]]: The three men [[sit]] and talk about their lives.,0.0050765872001647,2.0,2.0,0
+125,[[[[Premise]]]]: Five girls and two guys are crossing a overpass.<SPLIT>[[[[Hypothesis]]]]: There are [[people]] outside.,0.0131107568740844,0.0,0.0,0
+126,[[[[Premise]]]]: A person with a purple shirt is painting an image of a woman on a white wall.<SPLIT>[[[[Hypothesis]]]]: A woman [[paints]] a portrait of her [[best]] friend.,0.0142093896865844,1.0,1.0,0
+127,[[[[Premise]]]]: A person with a purple shirt is painting an image of a woman on a white wall.<SPLIT>[[[[Hypothesis]]]]: A woman paints a portrait of a [[monkey]].,0.0630528330802917,2.0,2.0,0
+128,[[[[Premise]]]]: A woman is painting a mural of a woman's face.<SPLIT>[[[[Hypothesis]]]]: There is a [[woman]] painting.,0.0097109079360961,0.0,0.0,0
+129,[[[[Premise]]]]: A woman is painting a mural of a woman's face.<SPLIT>[[[[Hypothesis]]]]: There is a woman painting for [[fun]].,0.0318171977996826,1.0,1.0,0
+130,[[[[Premise]]]]: A woman is painting a mural of a woman's face.<SPLIT>[[[[Hypothesis]]]]: There is a [[man]] [[tying]] his [[shoes]].,0.0018877983093261,2.0,2.0,0
+131,[[[[Premise]]]]: A couple is eating outside at a table and he is pointing at something.<SPLIT>[[[[Hypothesis]]]]: A couple is eating [[inside]] at a table and he is pointing at something.,0.1352402567863464,2.0,2.0,0
+132,[[[[Premise]]]]: A couple is eating outside at a table and he is pointing at something.<SPLIT>[[[[Hypothesis]]]]: The man is [[pointing]] at a purse snatcher.,0.2648914456367492,1.0,1.0,0
+133,[[[[Premise]]]]: A couple is eating outside at a table and he is pointing at something.<SPLIT>[[[[Hypothesis]]]]: [[People]] are eating at a table [[outside]].,0.0346795320510864,0.0,0.0,0
+134,[[[[Premise]]]]: Two women walk down a sidewalk along a busy street in a downtown area.<SPLIT>[[[[Hypothesis]]]]: The women were walking downtown [[because]] the buses were on strike,0.217930257320404,1.0,1.0,0
+135,[[[[Premise]]]]: Two women walk down a sidewalk along a busy street in a downtown area.<SPLIT>[[[[Hypothesis]]]]: The women were picking berries in the [[countryside]],0.0045156478881835,2.0,2.0,0
+136,[[[[Premise]]]]: Two women walk down a sidewalk along a busy street in a downtown area.<SPLIT>[[[[Hypothesis]]]]: The women were [[walking]] downtown,0.2967066764831543,0.0,0.0,0
+137,"[[[[Premise]]]]: Many people standing outside of a place talking to each other in front of a building that has a sign that says ""HI-POINTE.""<SPLIT>[[[[Hypothesis]]]]: The people are having a [[chat]] before [[going]] into the work building.",0.0167455077171325,1.0,1.0,0
+138,"[[[[Premise]]]]: Many people standing outside of a place talking to each other in front of a building that has a sign that says ""HI-POINTE.""<SPLIT>[[[[Hypothesis]]]]: The [[people]] are [[sitting]] in the hotel [[lobby]].",0.0018162131309509,2.0,2.0,0
+139,[[[[Premise]]]]: The flight attendant dressed in yellow demonstrates life vest usage.<SPLIT>[[[[Hypothesis]]]]: A flight [[attendant]] is [[demonstrating]] safety procedures before takeoff.,0.1007266640663147,1.0,1.0,0
+140,[[[[Premise]]]]: The flight attendant dressed in yellow demonstrates life vest usage.<SPLIT>[[[[Hypothesis]]]]: A woman is preparing [[drinks]] on an airplane.,0.0639715790748596,2.0,2.0,0
+141,[[[[Premise]]]]: The girls walk down the street.<SPLIT>[[[[Hypothesis]]]]: Girls walk down the [[street]].,0.0123990774154663,0.0,0.0,0
+142,[[[[Premise]]]]: The girls walk down the street.<SPLIT>[[[[Hypothesis]]]]: Girls [[set]] down in the street.,0.4408822655677795,2.0,2.0,0
+143,[[[[Premise]]]]: The girls walk down the street.<SPLIT>[[[[Hypothesis]]]]: [[Girls]] were going to the park.,0.108397364616394,1.0,1.0,0
+144,[[[[Premise]]]]: A man wearing a red uniform and helmet stands on his motorbike.<SPLIT>[[[[Hypothesis]]]]: a man [[sitting]] in a car.,0.0022185444831848,2.0,2.0,0
+145,[[[[Premise]]]]: A man wearing a red uniform and helmet stands on his motorbike.<SPLIT>[[[[Hypothesis]]]]: a [[person]] standing.,0.011716604232788,0.0,0.0,0
+146,[[[[Premise]]]]: A man wearing a red uniform and helmet stands on his motorbike.<SPLIT>[[[[Hypothesis]]]]: a man standing on his [[motorbike]].,0.0123595595359802,0.0,0.0,0
+147,[[[[Premise]]]]: A man of the cloth puts a black substance on a man's forehead.<SPLIT>[[[[Hypothesis]]]]: The man puts something on the other [[mans]] head.,0.1464866995811462,0.0,0.0,0
+148,[[[[Premise]]]]: A man of the cloth puts a black substance on a man's forehead.<SPLIT>[[[[Hypothesis]]]]: The [[women]] are at the park.,0.0025116205215454,2.0,2.0,0
+149,[[[[Premise]]]]: A man of the cloth puts a black substance on a man's forehead.<SPLIT>[[[[Hypothesis]]]]: The men are at [[church]].,0.2876796722412109,1.0,1.0,0
+150,[[[[Premise]]]]: A person rolls down a hill riding a wagon as another watches.<SPLIT>[[[[Hypothesis]]]]: Two people are [[outside]].,0.0103870034217834,0.0,0.0,0
+151,[[[[Premise]]]]: A person rolls down a hill riding a wagon as another watches.<SPLIT>[[[[Hypothesis]]]]: A person [[stares]] at an empty [[hill]].,0.0143548846244812,2.0,2.0,0
+152,[[[[Premise]]]]: A person rolls down a hill riding a wagon as another watches.<SPLIT>[[[[Hypothesis]]]]: A [[child]] in a wagon rolls down a hill.,0.1516454219818115,1.0,1.0,0
+153,[[[[Premise]]]]: a boy holding onto the wall of an old brick house's raised foundation.<SPLIT>[[[[Hypothesis]]]]: a boy holding onto the wall of an old brick house's raised [[foundation]] as construction occurs,0.3496515154838562,1.0,1.0,0
+154,[[[[Premise]]]]: a boy holding onto the wall of an old brick house's raised foundation.<SPLIT>[[[[Hypothesis]]]]: a [[girl]] is leaning against the wall,0.0018551349639892,2.0,2.0,0
+155,[[[[Premise]]]]: a boy holding onto the wall of an old brick house's raised foundation.<SPLIT>[[[[Hypothesis]]]]: a boy is against the [[wall]] of a raised foundation,0.2669660449028015,0.0,0.0,0
+156,"[[[[Premise]]]]: Bruce Springsteen, with one arm outstretched, is singing in the spotlight in a dark concert hall.<SPLIT>[[[[Hypothesis]]]]: Bruce [[Springsteen]] is from Florida.",0.0985325574874877,1.0,1.0,0
+157,"[[[[Premise]]]]: Bruce Springsteen, with one arm outstretched, is singing in the spotlight in a dark concert hall.<SPLIT>[[[[Hypothesis]]]]: Bruce Springsteen is a [[singer]].",0.4585151672363281,0.0,0.0,0
+158,"[[[[Premise]]]]: Bruce Springsteen, with one arm outstretched, is singing in the spotlight in a dark concert hall.<SPLIT>[[[[Hypothesis]]]]: Bruce Springsteen is [[gay]]",0.0148220658302307,1.0,1.0,0
+159,[[[[Premise]]]]: Six dogs swimming in a river.<SPLIT>[[[[Hypothesis]]]]: Six [[dogs]] are outdoors.,0.0128384232521057,0.0,0.0,0
+160,[[[[Premise]]]]: Six dogs swimming in a river.<SPLIT>[[[[Hypothesis]]]]: [[The]] puppies are setting on the [[couch]].,0.001214325428009,2.0,2.0,0
+161,[[[[Premise]]]]: A man and woman are taking a picture of themselves while a woman in a scarf walks by them.<SPLIT>[[[[Hypothesis]]]]: A man and woman have mug shots taken because they have been [[arrested]].,0.2983187437057495,2.0,2.0,0
+162,[[[[Premise]]]]: A man and woman are taking a picture of themselves while a woman in a scarf walks by them.<SPLIT>[[[[Hypothesis]]]]: A man and woman take selfies while a woman walks by and [[judges]] them.,0.0659672617912292,1.0,1.0,0
+163,[[[[Premise]]]]: A man and woman are taking a picture of themselves while a woman in a scarf walks by them.<SPLIT>[[[[Hypothesis]]]]: A [[man]] and woman take selfies of themselves.,0.4718447923660278,0.0,0.0,0
+164,[[[[Premise]]]]: a group of people dancing together.<SPLIT>[[[[Hypothesis]]]]: People are [[dancing]].,0.0118777155876159,0.0,0.0,0
+165,[[[[Premise]]]]: a group of people dancing together.<SPLIT>[[[[Hypothesis]]]]: They are doing the [[tango]].,0.0334917902946472,1.0,1.0,0
+166,[[[[Premise]]]]: a group of people dancing together.<SPLIT>[[[[Hypothesis]]]]: [[No]] one is [[dancing]].,0.0021881461143493,2.0,2.0,0
+167,[[[[Premise]]]]: Men wearing blue uniforms sit on a bus.<SPLIT>[[[[Hypothesis]]]]: Men sit on the [[bus]].,0.0135273933410644,0.0,0.0,0
+168,"[[[[Premise]]]]: Men wearing blue uniforms sit on a bus.<SPLIT>[[[[Hypothesis]]]]: Men sit on the [[bus]] going to work,",0.005613088607788,1.0,1.0,0
+169,[[[[Premise]]]]: Men wearing blue uniforms sit on a bus.<SPLIT>[[[[Hypothesis]]]]: Men [[drive]] the bus into the [[ocean]].,0.0042527318000793,2.0,2.0,0
+170,[[[[Premise]]]]: Two men climbing on a wooden scaffold.<SPLIT>[[[[Hypothesis]]]]: Two [[people]] climbing on a wooden scaffold.,0.0208539962768554,0.0,0.0,0
+171,[[[[Premise]]]]: Two men climbing on a wooden scaffold.<SPLIT>[[[[Hypothesis]]]]: Two [[women]] climbing on a wooden scaffold.,0.0014656782150268,2.0,2.0,0
+172,[[[[Premise]]]]: This church choir sings to the masses as they sing joyous songs from the book at a church.<SPLIT>[[[[Hypothesis]]]]: The church is filled with [[chanson]].,0.9830423593521118,1.0,0.0,1
+173,[[[[Premise]]]]: This church choir sings to the masses as they sing joyous songs from the book at a church.<SPLIT>[[[[Hypothesis]]]]: [[paras]] [[hymns]] [[hymns]] at a [[ballon]] game.,0.5488816499710083,1.0,2.0,1
+174,"[[[[Premise]]]]: A woman with a green headscarf, blue shirt and a very big grin.<SPLIT>[[[[Hypothesis]]]]: The woman is [[youthful]].",0.9096229076385498,0.0,1.0,1
+175,"[[[[Premise]]]]: A woman with a green headscarf, blue shirt and a very big grin.<SPLIT>[[[[Hypothesis]]]]: The [[mesdames]] is very happy.",0.7005828619003296,1.0,0.0,1
+176,[[[[Premise]]]]: An old man with a package poses in front of an advertisement.<SPLIT>[[[[Hypothesis]]]]: A man poses in [[frente]] of an [[pubs]].,0.7779526114463806,1.0,0.0,1
+177,[[[[Premise]]]]: An old man with a package poses in front of an advertisement.<SPLIT>[[[[Hypothesis]]]]: A man [[arises]] in front of an [[announced]] for [[bier]].,0.7544665336608887,0.0,1.0,1
+178,[[[[Premise]]]]: An old man with a package poses in front of an advertisement.<SPLIT>[[[[Hypothesis]]]]: A man [[strolls]] by an ad.,0.99246484041214,0.0,2.0,1
+179,[[[[Premise]]]]: A statue at a museum that no seems to be looking at.<SPLIT>[[[[Hypothesis]]]]: The statue is offensive and people are mad that it is on [[screens]].,0.5030012130737305,2.0,1.0,1
+180,[[[[Premise]]]]: A statue at a museum that no seems to be looking at.<SPLIT>[[[[Hypothesis]]]]: There is a statue that not many [[gens]] [[happen]] to be interested in.,0.6614092588424683,1.0,0.0,1
+181,[[[[Premise]]]]: A land rover is being driven across a river.<SPLIT>[[[[Hypothesis]]]]: A vehicle is crossing a [[arroyo]].,0.6896358728408813,1.0,0.0,1
+182,[[[[Premise]]]]: A land rover is being driven across a river.<SPLIT>[[[[Hypothesis]]]]: A [[roadster]] is [[stranded]] in the middle of a river.,0.7133487462997437,1.0,2.0,1
+183,[[[[Premise]]]]: A man playing an electric guitar on stage.<SPLIT>[[[[Hypothesis]]]]: A man playing [[bluesy]] on the [[ground]].,0.7657409906387329,1.0,2.0,1
+184,[[[[Premise]]]]: A man playing an electric guitar on stage.<SPLIT>[[[[Hypothesis]]]]: A man playing guitar on [[ballpark]].,0.9986544847488404,2.0,0.0,1
+185,[[[[Premise]]]]: A man playing an electric guitar on stage.<SPLIT>[[[[Hypothesis]]]]: A man is performing for [[currency]].,0.7160096764564514,2.0,1.0,1
+186,[[[[Premise]]]]: A blond-haired doctor and her African american assistant looking threw new medical manuals.<SPLIT>[[[[Hypothesis]]]]: A [[masculine]] is [[essen]] pb and j,0.6287516951560974,0.0,2.0,1
+187,"[[[[Premise]]]]: One tan girl with a wool hat is running and leaning over an object, while another person in a wool hat is sitting on the ground.<SPLIT>[[[[Hypothesis]]]]: A [[buddies]] runs into a wall",0.5455547571182251,1.0,2.0,1
+188,"[[[[Premise]]]]: One tan girl with a wool hat is running and leaning over an object, while another person in a wool hat is sitting on the ground.<SPLIT>[[[[Hypothesis]]]]: A tan girl runs [[squints]] over an object",0.6304686069488525,1.0,0.0,1
+189,[[[[Premise]]]]: A young family enjoys feeling ocean waves lap at their feet.<SPLIT>[[[[Hypothesis]]]]: A young man and woman take their child to the [[shore]] for the first [[tiempo]].,0.6768203973770142,2.0,1.0,1
+190,[[[[Premise]]]]: A young family enjoys feeling ocean waves lap at their feet.<SPLIT>[[[[Hypothesis]]]]: A family is out at a [[dine]].,0.6673597693443298,0.0,2.0,1
+191,[[[[Premise]]]]: A young family enjoys feeling ocean waves lap at their feet.<SPLIT>[[[[Hypothesis]]]]: [[another]] [[familial]] is at the beach.,0.546786904335022,1.0,0.0,1
+192,[[[[Premise]]]]: A couple walk hand in hand down a street.<SPLIT>[[[[Hypothesis]]]]: A [[ballgame]] is walking together.,0.9920312166213988,2.0,0.0,1
+193,[[[[Premise]]]]: A couple walk hand in hand down a street.<SPLIT>[[[[Hypothesis]]]]: The [[ballgame]] is [[femme]].,0.9666050672531128,2.0,1.0,1
+194,[[[[Premise]]]]: A couple walk hand in hand down a street.<SPLIT>[[[[Hypothesis]]]]: A couple is [[installed]] on a [[oar]].,0.6038305759429932,1.0,2.0,1
+195,[[[[Premise]]]]: 3 young man in hoods standing in the middle of a quiet street facing the camera.<SPLIT>[[[[Hypothesis]]]]: Three [[individuals]] [[assis]] by a busy street bareheaded.,0.6887659430503845,0.0,2.0,1
+196,[[[[Premise]]]]: 3 young man in hoods standing in the middle of a quiet street facing the camera.<SPLIT>[[[[Hypothesis]]]]: Three hood wearing people stand in a [[thoroughfare]].,0.6504729986190796,1.0,0.0,1
+197,[[[[Premise]]]]: A man reads the paper in a bar with green lighting.<SPLIT>[[[[Hypothesis]]]]: The man is [[inboard]].,0.585544764995575,2.0,0.0,1
+198,[[[[Premise]]]]: A man reads the paper in a bar with green lighting.<SPLIT>[[[[Hypothesis]]]]: The [[fella]] is reading the sportspage.,0.5727725625038147,2.0,1.0,1
+199,[[[[Premise]]]]: A man reads the paper in a bar with green lighting.<SPLIT>[[[[Hypothesis]]]]: The man is [[increasing]] a [[montagne]].,0.7268222570419312,1.0,2.0,1
+200,[[[[Premise]]]]: Three firefighter come out of subway station.<SPLIT>[[[[Hypothesis]]]]: Three [[arsonist]] coming up from a subway station.,0.6665704250335693,1.0,0.0,1
+201,[[[[Premise]]]]: Three firefighter come out of subway station.<SPLIT>[[[[Hypothesis]]]]: Three firefighters [[jeu]] [[charting]] inside a fire station.,0.7997640371322632,0.0,2.0,1
+202,"[[[[Premise]]]]: A person wearing a straw hat, standing outside working a steel apparatus with a pile of coconuts on the ground.<SPLIT>[[[[Hypothesis]]]]: A person is [[roundabout]] a [[piling]] of coconuts.",0.7736505270004272,1.0,0.0,1
+203,"[[[[Premise]]]]: A person wearing a straw hat, standing outside working a steel apparatus with a pile of coconuts on the ground.<SPLIT>[[[[Hypothesis]]]]: A person is [[vending]] [[copra]].",0.9557497501373292,2.0,1.0,1
+204,"[[[[Premise]]]]: A person wearing a straw hat, standing outside working a steel apparatus with a pile of coconuts on the ground.<SPLIT>[[[[Hypothesis]]]]: A person is [[feu]] a straw hat.",0.962238609790802,0.0,2.0,1
+205,[[[[Premise]]]]: Male in a blue jacket decides to lay in the grass.<SPLIT>[[[[Hypothesis]]]]: The guy in [[yellowish]] is [[roll]] on the grass,0.8008192777633667,0.0,2.0,1
+206,[[[[Premise]]]]: Male in a blue jacket decides to lay in the grass.<SPLIT>[[[[Hypothesis]]]]: The guy wearing a [[contusion]] jacket is laying on the green [[sod]] taking a [[anc]].,0.5583394765853882,2.0,1.0,1
+207,[[[[Premise]]]]: During calf roping a cowboy calls off his horse.<SPLIT>[[[[Hypothesis]]]]: A first [[timeline]] roper falls off his [[racehorse]].,0.8446059226989746,2.0,1.0,1
+208,[[[[Premise]]]]: A little boy in a gray and white striped sweater and tan pants is playing on a piece of playground equipment.<SPLIT>[[[[Hypothesis]]]]: A boy is on a [[schoolyard]].,0.979953110218048,1.0,0.0,1
+209,[[[[Premise]]]]: A little boy in a gray and white striped sweater and tan pants is playing on a piece of playground equipment.<SPLIT>[[[[Hypothesis]]]]: The [[man]] is [[gambling]] on the swings after [[pupil]].,0.8516459465026855,2.0,1.0,1
+210,[[[[Premise]]]]: A little boy in a gray and white striped sweater and tan pants is playing on a piece of playground equipment.<SPLIT>[[[[Hypothesis]]]]: The [[boys]] is [[assisi]] on the school [[omnibus]] on his way home.,0.5249617099761963,1.0,2.0,1
+211,[[[[Premise]]]]: A woman wearing a ball cap squats down to touch the cracked earth.<SPLIT>[[[[Hypothesis]]]]: An [[biochemist]] wearing a hat [[lunges]] to examine the [[website]] for a [[subterranean]],0.666845440864563,2.0,1.0,1
+212,[[[[Premise]]]]: A woman wearing a ball cap squats down to touch the cracked earth.<SPLIT>[[[[Hypothesis]]]]: A squatting woman wearing a hat [[touch]] the [[masa]].,0.659419596195221,2.0,0.0,1
+213,[[[[Premise]]]]: A woman wearing a ball cap squats down to touch the cracked earth.<SPLIT>[[[[Hypothesis]]]]: A woman [[haven]] a sun [[capping]] planting a [[gardening]].,0.5707979202270508,1.0,2.0,1
+214,[[[[Premise]]]]: Two children re laying on a rug with some wooden bricks laid out in a square between them.<SPLIT>[[[[Hypothesis]]]]: Two children are [[plaything]] [[reaped]] at a park.,0.7830716371536255,1.0,2.0,1
+215,[[[[Premise]]]]: Two children re laying on a rug with some wooden bricks laid out in a square between them.<SPLIT>[[[[Hypothesis]]]]: Two children are on a [[tapestry]].,0.8867932558059692,2.0,0.0,1
+216,[[[[Premise]]]]: A man standing in front of a building on the phone as two men to the side pain on the side.<SPLIT>[[[[Hypothesis]]]]: a [[fella]] [[tightest]] a building stands by two other men,0.59425288438797,1.0,0.0,1
+217,[[[[Premise]]]]: A man standing in front of a building on the phone as two men to the side pain on the side.<SPLIT>[[[[Hypothesis]]]]: two [[damsel]] [[walking]] through a [[hallway]],0.5121995210647583,1.0,2.0,1
+218,[[[[Premise]]]]: A man standing in front of a building on the phone as two men to the side pain on the side.<SPLIT>[[[[Hypothesis]]]]: a busy [[masculine]] stands with [[orderlies]],0.6034408807754517,0.0,1.0,1
+219,"[[[[Premise]]]]: The two young girls are dressed as fairies, and are playing in the leaves outdoors.<SPLIT>[[[[Hypothesis]]]]: [[Madams]] are playing outdoors.",0.813138484954834,1.0,0.0,1
+220,"[[[[Premise]]]]: The two young girls are dressed as fairies, and are playing in the leaves outdoors.<SPLIT>[[[[Hypothesis]]]]: Two girls play dress up [[inner]].",0.9695204496383668,0.0,2.0,1
+221,"[[[[Premise]]]]: The two young girls are dressed as fairies, and are playing in the leaves outdoors.<SPLIT>[[[[Hypothesis]]]]: The two girls play in the [[Tumbles]].",0.9370050430297852,2.0,1.0,1
+222,[[[[Premise]]]]: People jump over a mountain crevasse on a rope.<SPLIT>[[[[Hypothesis]]]]: Some people look visually [[apprehensive]] to jump.,0.5984771251678467,0.0,1.0,1
+223,[[[[Premise]]]]: People jump over a mountain crevasse on a rope.<SPLIT>[[[[Hypothesis]]]]: [[Burgers]] are jumping outside.,0.8475857973098755,2.0,0.0,1
+224,[[[[Premise]]]]: People jump over a mountain crevasse on a rope.<SPLIT>[[[[Hypothesis]]]]: [[Beings]] slide over a mountain crevasse on a slide.,0.6310240626335144,0.0,2.0,1
+225,[[[[Premise]]]]: A snowboarder on a wide plain of snow<SPLIT>[[[[Hypothesis]]]]: A snow field with a [[skiers]] on it,0.9609256386756896,2.0,0.0,1
+226,[[[[Premise]]]]: An older women tending to a garden.<SPLIT>[[[[Hypothesis]]]]: The lady is [[pans]] [[potluck]],0.7590009570121765,1.0,2.0,1
+227,[[[[Premise]]]]: An older women tending to a garden.<SPLIT>[[[[Hypothesis]]]]: The lady is [[fertilizing]] her garden,0.8339574337005615,0.0,1.0,1
+228,[[[[Premise]]]]: An older women tending to a garden.<SPLIT>[[[[Hypothesis]]]]: The lady has a [[playpen]],0.974069356918335,2.0,0.0,1
+229,[[[[Premise]]]]: A man in a black shirt overlooking bike maintenance.<SPLIT>[[[[Hypothesis]]]]: A man [[destroyer]] a bike.,0.8679400682449341,0.0,2.0,1
+230,[[[[Premise]]]]: A man in a black shirt overlooking bike maintenance.<SPLIT>[[[[Hypothesis]]]]: A [[roosters]] watches [[motorbike]] repairs.,0.9786968231201172,2.0,0.0,1
+231,[[[[Premise]]]]: A man in a black shirt overlooking bike maintenance.<SPLIT>[[[[Hypothesis]]]]: A man [[obtains]] bike maintenance.,0.907210886478424,0.0,1.0,1
+232,[[[[Premise]]]]: A man in a black shirt is looking at a bike in a workshop.<SPLIT>[[[[Hypothesis]]]]: A man is [[harbours]] a red [[overcoat]],0.7438995838165283,1.0,2.0,1
+233,[[[[Premise]]]]: A man in a black shirt is looking at a bike in a workshop.<SPLIT>[[[[Hypothesis]]]]: A man is in a black [[sweatshirt]],0.7900314331054688,1.0,0.0,1
+234,[[[[Premise]]]]: A man in a black shirt is looking at a bike in a workshop.<SPLIT>[[[[Hypothesis]]]]: A [[fella]] is [[ruled]] which bike to [[absorbing]],0.6623787879943848,2.0,1.0,1
+235,[[[[Premise]]]]: A man looking over a bicycle's rear wheel in the maintenance garage with various tools visible in the background.<SPLIT>[[[[Hypothesis]]]]: A person is in a [[stockroom]].,0.9212232232093812,2.0,0.0,1
+236,[[[[Premise]]]]: A man looking over a bicycle's rear wheel in the maintenance garage with various tools visible in the background.<SPLIT>[[[[Hypothesis]]]]: [[paras]] man repairs bicycles.,0.5308423042297363,1.0,0.0,1
+237,"[[[[Premise]]]]: Three people sit on a bench at a station, the man looks oddly at the two women, the redheaded women looks up and forward in an awkward position, and the yellow blond girl twiddles with her hair.<SPLIT>[[[[Hypothesis]]]]: Some people [[booth]] around.",0.9741284251213074,0.0,2.0,1
+238,"[[[[Premise]]]]: Three people sit on a bench at a station, the man looks oddly at the two women, the redheaded women looks up and forward in an awkward position, and the yellow blond girl twiddles with her hair.<SPLIT>[[[[Hypothesis]]]]: People [[conducted]] together.",0.993183434009552,0.0,2.0,1
+239,"[[[[Premise]]]]: Three people sit on a bench at a station, the man looks oddly at the two women, the redheaded women looks up and forward in an awkward position, and the yellow blond girl twiddles with her hair.<SPLIT>[[[[Hypothesis]]]]: [[Nationality]] wait at a station.",0.7026099562644958,1.0,0.0,1
+240,[[[[Premise]]]]: A child wearing a red top is standing behind a blond headed child sitting in a wheelbarrow.<SPLIT>[[[[Hypothesis]]]]: A [[enfants]] [[seaport]] a red top is standing behind a blond headed child,0.6994127035140991,1.0,0.0,1
+241,[[[[Premise]]]]: A child wearing a red top is standing behind a blond headed child sitting in a wheelbarrow.<SPLIT>[[[[Hypothesis]]]]: A child wearing a red top is [[stands]] on top of a blond headed child,0.5628058910369873,0.0,2.0,1
+242,[[[[Premise]]]]: A child wearing a red top is standing behind a blond headed child sitting in a wheelbarrow.<SPLIT>[[[[Hypothesis]]]]: A child wearing a red top is standing behind a [[kinda]] blond headed child,0.5883220434188843,0.0,1.0,1
+243,"[[[[Premise]]]]: A person dressed in a dress with flowers and a stuffed bee attached to it, is pushing a baby stroller down the street.<SPLIT>[[[[Hypothesis]]]]: An [[dilapidated]] lady pushing a stroller down a busy [[rue]].",0.8965980410575867,2.0,1.0,1
+244,"[[[[Premise]]]]: A person dressed in a dress with flowers and a stuffed bee attached to it, is pushing a baby stroller down the street.<SPLIT>[[[[Hypothesis]]]]: A person outside pushing a [[buggies]].",0.8113352060317993,2.0,0.0,1
+245,[[[[Premise]]]]: A dog jumping for a Frisbee in the snow.<SPLIT>[[[[Hypothesis]]]]: A [[pets]] is enjoying a game of fetch with his [[innkeeper]].,0.6458553075790405,2.0,1.0,1
+246,[[[[Premise]]]]: A dog jumping for a Frisbee in the snow.<SPLIT>[[[[Hypothesis]]]]: A [[puss]] [[laver]] his face and whiskers with his front paw.,0.8750152587890625,1.0,2.0,1
+247,"[[[[Premise]]]]: A dog jumping for a Frisbee in the snow.<SPLIT>[[[[Hypothesis]]]]: An [[jackals]] is outside in the cold weather, playing with a plastic toy.",0.7354397177696228,1.0,0.0,1
+248,[[[[Premise]]]]: People are conversing at a dining table under a canopy.<SPLIT>[[[[Hypothesis]]]]: People at a party are seated for [[supper]] on the lawn.,0.6339815258979797,2.0,1.0,1
+249,[[[[Premise]]]]: People are conversing at a dining table under a canopy.<SPLIT>[[[[Hypothesis]]]]: People are talking underneath a [[covers]].,0.7459003925323486,2.0,0.0,1
+250,[[[[Premise]]]]: People are conversing at a dining table under a canopy.<SPLIT>[[[[Hypothesis]]]]: [[Population]] are [[screeches]] at a [[pugilist]] match.,0.5650075674057007,1.0,2.0,1
+251,[[[[Premise]]]]: A girl playing a violin along with a group of people<SPLIT>[[[[Hypothesis]]]]: A [[niece]] is [[decontamination]] a load of [[detergent]].,0.6950049996376038,1.0,2.0,1
+252,[[[[Premise]]]]: A girl playing a violin along with a group of people<SPLIT>[[[[Hypothesis]]]]: A girl is playing an [[accoutrements]].,0.717613935470581,1.0,0.0,1
+253,[[[[Premise]]]]: A girl playing a violin along with a group of people<SPLIT>[[[[Hypothesis]]]]: A group of [[peoples]] are playing in a [[bruckner]].,0.676450788974762,0.0,1.0,1
+254,[[[[Premise]]]]: A woman within an orchestra is playing a violin.<SPLIT>[[[[Hypothesis]]]]: A woman is playing a [[music]].,0.9643645882606506,0.0,1.0,1
+255,[[[[Premise]]]]: A woman within an orchestra is playing a violin.<SPLIT>[[[[Hypothesis]]]]: A woman is [[replicate]] the violin.,0.6799905300140381,1.0,0.0,1
+256,"[[[[Premise]]]]: Three men, one holding pipes, another holding a large object above his head, and one resting against the pipe bed on the truck, are looking at the camera.<SPLIT>[[[[Hypothesis]]]]: three [[fellas]] going to [[trabajo]]",0.5033071041107178,2.0,1.0,1
+257,"[[[[Premise]]]]: Three men, one holding pipes, another holding a large object above his head, and one resting against the pipe bed on the truck, are looking at the camera.<SPLIT>[[[[Hypothesis]]]]: three men look at the [[courtrooms]]",0.9959403872489928,2.0,0.0,1
+258,"[[[[Premise]]]]: Three men, one holding pipes, another holding a large object above his head, and one resting against the pipe bed on the truck, are looking at the camera.<SPLIT>[[[[Hypothesis]]]]: three men [[bed]] in a [[stores]]",0.6212763786315918,1.0,2.0,1
+259,[[[[Premise]]]]: A Ford car is making a right turn as 3 males are walking across the street behind the car.<SPLIT>[[[[Hypothesis]]]]: A car making a right turn [[grabbed]] three pedestrians cross behind it.,0.790246844291687,1.0,0.0,1
+260,[[[[Premise]]]]: Three boys in white shirts are walking behind an older model Ford car.<SPLIT>[[[[Hypothesis]]]]: there are three [[fella]],0.9112934470176696,2.0,0.0,1
+261,[[[[Premise]]]]: Three boys in white shirts are walking behind an older model Ford car.<SPLIT>[[[[Hypothesis]]]]: There are three [[fille]],0.9518868327140808,0.0,2.0,1
+262,[[[[Premise]]]]: Three girls blow out the candles of a cake made of Peeps.<SPLIT>[[[[Hypothesis]]]]: Some [[gens]] are blowing out candles,0.6165379285812378,1.0,0.0,1
+263,[[[[Premise]]]]: Three girls blow out the candles of a cake made of Peeps.<SPLIT>[[[[Hypothesis]]]]: There are three [[dames]] and a cake,0.8090624809265137,1.0,0.0,1
+264,[[[[Premise]]]]: Three girls blow out the candles of a cake made of Peeps.<SPLIT>[[[[Hypothesis]]]]: There are peeps in the [[gardens]].,0.6055381298065186,1.0,2.0,1
+265,[[[[Premise]]]]: A crowd of people looking up at 3 people on the edge of the roof of a building.<SPLIT>[[[[Hypothesis]]]]: The [[affluence]] is [[requiring]] for [[succor]] for the people on the [[rafters]].,0.5862439870834351,0.0,1.0,1
+266,[[[[Premise]]]]: A crowd of people looking up at 3 people on the edge of the roof of a building.<SPLIT>[[[[Hypothesis]]]]: Three people are [[increasing]] down the ladder on the building.,0.6181769371032715,0.0,2.0,1
+267,[[[[Premise]]]]: A woman working long hours.<SPLIT>[[[[Hypothesis]]]]: A woman is working in a [[vegetative]].,0.7114660739898682,0.0,1.0,1
+268,[[[[Premise]]]]: A woman working long hours.<SPLIT>[[[[Hypothesis]]]]: A woman is [[partnerships]].,0.9240288734436036,1.0,0.0,1
+269,[[[[Premise]]]]: A woman working long hours.<SPLIT>[[[[Hypothesis]]]]: A woman is [[bedding]].,0.733853816986084,1.0,2.0,1
+270,[[[[Premise]]]]: Two teenage girls conversing next to lockers.<SPLIT>[[[[Hypothesis]]]]: Girls talking next to the [[bathrooms]].,0.980452597141266,0.0,2.0,1
+271,[[[[Premise]]]]: Two teenage girls conversing next to lockers.<SPLIT>[[[[Hypothesis]]]]: [[Men]] talking next to lockers.,0.9979614615440368,2.0,0.0,1
+272,[[[[Premise]]]]: Two teenage girls conversing next to lockers.<SPLIT>[[[[Hypothesis]]]]: [[Female]] [[speaks]] about their [[question]] next to [[cupboard]].,0.7604103684425354,0.0,1.0,1
+273,[[[[Premise]]]]: An old woman watches a man look down at some balls on the ground.<SPLIT>[[[[Hypothesis]]]]: An elderly female is [[stalked]] a male.,0.6905737519264221,2.0,1.0,1
+274,"[[[[Premise]]]]: Two children, both wearing tan coats, are embracing one another.<SPLIT>[[[[Hypothesis]]]]: Two kids are [[snuggling]] after surviving a horrible car wreck.",0.7524341940879822,2.0,1.0,1
+275,"[[[[Premise]]]]: Two children, both wearing tan coats, are embracing one another.<SPLIT>[[[[Hypothesis]]]]: Two kids are [[screwing]].",0.9976316690444946,2.0,0.0,1
+276,"[[[[Premise]]]]: Two children, both wearing tan coats, are embracing one another.<SPLIT>[[[[Hypothesis]]]]: Two kids are [[performance]] down a highway.",0.5450751781463623,1.0,2.0,1
+277,[[[[Premise]]]]: 2 kids who look related are hanging out with 1 of them looking very emotional and hugging the other.<SPLIT>[[[[Hypothesis]]]]: A couple of child relatives were [[hugged]] [[than]] they were [[content]] to see [[both]] other.,0.5384989976882935,0.0,1.0,1
+278,[[[[Premise]]]]: 2 kids who look related are hanging out with 1 of them looking very emotional and hugging the other.<SPLIT>[[[[Hypothesis]]]]: Two [[schoolchildren]] were hugging.,0.772689700126648,1.0,0.0,1
+279,[[[[Premise]]]]: 2 kids who look related are hanging out with 1 of them looking very emotional and hugging the other.<SPLIT>[[[[Hypothesis]]]]: Two youths were [[nudging]] each other.,0.9045722484588624,0.0,2.0,1
+280,[[[[Premise]]]]: A large number of people wearing only white and red are walking on a street.<SPLIT>[[[[Hypothesis]]]]: A large number of people wearing [[noir]] walking down the street.,0.8105038404464722,1.0,2.0,1
+281,[[[[Premise]]]]: A large number of people wearing only white and red are walking on a street.<SPLIT>[[[[Hypothesis]]]]: A large number of [[homme]] walking down the street in red and white.,0.7898319363594055,0.0,1.0,1
+282,[[[[Premise]]]]: A large number of people wearing only white and red are walking on a street.<SPLIT>[[[[Hypothesis]]]]: A large number of people walking on a [[rue]].,0.7555622458457947,1.0,0.0,1
+283,[[[[Premise]]]]: A guy riding a motorcycle near junk cars<SPLIT>[[[[Hypothesis]]]]: The man is test driving a [[sidecar]] to decide whether or not he will buy it.,0.9789942502975464,2.0,1.0,1
+284,[[[[Premise]]]]: A guy riding a motorcycle near junk cars<SPLIT>[[[[Hypothesis]]]]: A man is riding a [[scooters]].,0.9993847608566284,2.0,0.0,1
+285,[[[[Premise]]]]: A guy riding a motorcycle near junk cars<SPLIT>[[[[Hypothesis]]]]: A man is sitting on a parked motorcycle [[expecting]] for his friend.,0.6069066524505615,1.0,2.0,1
+286,"[[[[Premise]]]]: Women of India performing with blue streamers, in beautiful blue costumes.<SPLIT>[[[[Hypothesis]]]]: indian women perform together in gorgeous [[frocks]]",0.8469676971435547,1.0,0.0,1
+287,"[[[[Premise]]]]: Women of India performing with blue streamers, in beautiful blue costumes.<SPLIT>[[[[Hypothesis]]]]: [[canine]] sniff the air",0.7431342601776123,0.0,2.0,1
+288,"[[[[Premise]]]]: Women of India performing with blue streamers, in beautiful blue costumes.<SPLIT>[[[[Hypothesis]]]]: indian women are [[execution]] a [[sectarian]] ritual together",0.5142499208450317,2.0,1.0,1
+289,[[[[Premise]]]]: A professional swimmer spits water out after surfacing while grabbing the hand of someone helping him back to land.<SPLIT>[[[[Hypothesis]]]]: A [[anybody]] is swimming.,0.5137115716934204,2.0,0.0,1
+290,[[[[Premise]]]]: A professional swimmer spits water out after surfacing while grabbing the hand of someone helping him back to land.<SPLIT>[[[[Hypothesis]]]]: The swimmer is [[ingestion]] a toasted [[sprinkles]].,0.6751813888549805,1.0,2.0,1
+291,[[[[Premise]]]]: A professional swimmer spits water out after surfacing while grabbing the hand of someone helping him back to land.<SPLIT>[[[[Hypothesis]]]]: The [[gymnast]] almost [[submerge]] after being sucked under a fast [[uninterrupted]].,0.6196324229240417,2.0,1.0,1
+292,[[[[Premise]]]]: The man in the black wetsuit is walking out of the water.<SPLIT>[[[[Hypothesis]]]]: A man in a wetsuit walks out of the water [[porter]] a [[snowboard]].,0.8514239192008972,2.0,1.0,1
+293,[[[[Premise]]]]: The man in the black wetsuit is walking out of the water.<SPLIT>[[[[Hypothesis]]]]: a [[whosoever]] is walking out of water.,0.7998414039611816,1.0,0.0,1
+294,[[[[Premise]]]]: The man in the black wetsuit is walking out of the water.<SPLIT>[[[[Hypothesis]]]]: A man is [[establishes]] on the beach.,0.8850405216217041,1.0,2.0,1
+295,[[[[Premise]]]]: Five girls and two guys are crossing a overpass.<SPLIT>[[[[Hypothesis]]]]: The extended family hike together on their family [[pool]].,0.7721508741378784,2.0,1.0,1
+296,[[[[Premise]]]]: Five girls and two guys are crossing a overpass.<SPLIT>[[[[Hypothesis]]]]: The three men [[session]] and talk about their lives.,0.512116551399231,1.0,2.0,1
+297,[[[[Premise]]]]: Five girls and two guys are crossing a overpass.<SPLIT>[[[[Hypothesis]]]]: There are [[burgers]] outside.,0.979748010635376,1.0,0.0,1
+298,[[[[Premise]]]]: A person with a purple shirt is painting an image of a woman on a white wall.<SPLIT>[[[[Hypothesis]]]]: A woman [[watercolours]] a portrait of her [[purest]] friend.,0.6878642439842224,2.0,1.0,1
+299,[[[[Premise]]]]: A person with a purple shirt is painting an image of a woman on a white wall.<SPLIT>[[[[Hypothesis]]]]: A woman paints a portrait of a [[primate]].,0.7878530025482178,1.0,2.0,1
+300,[[[[Premise]]]]: A woman is painting a mural of a woman's face.<SPLIT>[[[[Hypothesis]]]]: There is a [[girls]] painting.,0.648159921169281,1.0,0.0,1
+301,[[[[Premise]]]]: A woman is painting a mural of a woman's face.<SPLIT>[[[[Hypothesis]]]]: There is a woman painting for [[enchanting]].,0.5823823809623718,0.0,1.0,1
+302,[[[[Premise]]]]: A woman is painting a mural of a woman's face.<SPLIT>[[[[Hypothesis]]]]: There is a [[masculine]] [[connects]] his [[footwear]].,0.9680747985839844,0.0,2.0,1
+303,[[[[Premise]]]]: A couple is eating outside at a table and he is pointing at something.<SPLIT>[[[[Hypothesis]]]]: A couple is eating [[interior]] at a table and he is pointing at something.,0.966318666934967,0.0,2.0,1
+304,[[[[Premise]]]]: A couple is eating outside at a table and he is pointing at something.<SPLIT>[[[[Hypothesis]]]]: The man is [[outlining]] at a purse snatcher.,0.6243394613265991,2.0,1.0,1
+305,[[[[Premise]]]]: A couple is eating outside at a table and he is pointing at something.<SPLIT>[[[[Hypothesis]]]]: [[Populace]] are eating at a table [[besides]].,0.5694190263748169,1.0,0.0,1
+306,[[[[Premise]]]]: Two women walk down a sidewalk along a busy street in a downtown area.<SPLIT>[[[[Hypothesis]]]]: The women were walking downtown [[therefore]] the buses were on strike,0.5556551814079285,2.0,1.0,1
+307,[[[[Premise]]]]: Two women walk down a sidewalk along a busy street in a downtown area.<SPLIT>[[[[Hypothesis]]]]: The women were picking berries in the [[campaign]],0.6307045221328735,1.0,2.0,1
+308,[[[[Premise]]]]: Two women walk down a sidewalk along a busy street in a downtown area.<SPLIT>[[[[Hypothesis]]]]: The women were [[marche]] downtown,0.8499586582183838,1.0,0.0,1
+309,"[[[[Premise]]]]: Many people standing outside of a place talking to each other in front of a building that has a sign that says ""HI-POINTE.""<SPLIT>[[[[Hypothesis]]]]: The people are having a [[chitchat]] before [[vaya]] into the work building.",0.739712655544281,2.0,1.0,1
+310,"[[[[Premise]]]]: Many people standing outside of a place talking to each other in front of a building that has a sign that says ""HI-POINTE.""<SPLIT>[[[[Hypothesis]]]]: The [[ones]] are [[hearing]] in the hotel [[lobbies]].",0.6287649869918823,1.0,2.0,1
+311,[[[[Premise]]]]: The flight attendant dressed in yellow demonstrates life vest usage.<SPLIT>[[[[Hypothesis]]]]: A flight [[thereto]] is [[evidence]] safety procedures before takeoff.,0.6729875206947327,0.0,1.0,1
+312,[[[[Premise]]]]: The flight attendant dressed in yellow demonstrates life vest usage.<SPLIT>[[[[Hypothesis]]]]: A woman is preparing [[refreshment]] on an airplane.,0.5316461324691772,1.0,2.0,1
+313,[[[[Premise]]]]: The girls walk down the street.<SPLIT>[[[[Hypothesis]]]]: Girls walk down the [[boardwalk]].,0.9817788600921632,2.0,0.0,1
+314,[[[[Premise]]]]: The girls walk down the street.<SPLIT>[[[[Hypothesis]]]]: Girls [[configurations]] down in the street.,0.9933278560638428,0.0,2.0,1
+315,[[[[Premise]]]]: The girls walk down the street.<SPLIT>[[[[Hypothesis]]]]: [[Hookers]] were going to the park.,0.9278947114944458,2.0,1.0,1
+316,[[[[Premise]]]]: A man wearing a red uniform and helmet stands on his motorbike.<SPLIT>[[[[Hypothesis]]]]: a man [[assis]] in a car.,0.6656519174575806,0.0,2.0,1
+317,[[[[Premise]]]]: A man wearing a red uniform and helmet stands on his motorbike.<SPLIT>[[[[Hypothesis]]]]: a [[nobody]] standing.,0.9974480271339417,2.0,0.0,1
+318,[[[[Premise]]]]: A man wearing a red uniform and helmet stands on his motorbike.<SPLIT>[[[[Hypothesis]]]]: a man standing on his [[mopeds]].,0.933720588684082,2.0,0.0,1
+319,[[[[Premise]]]]: A man of the cloth puts a black substance on a man's forehead.<SPLIT>[[[[Hypothesis]]]]: The man puts something on the other [[almeria]] head.,0.6976954936981201,1.0,0.0,1
+320,[[[[Premise]]]]: A man of the cloth puts a black substance on a man's forehead.<SPLIT>[[[[Hypothesis]]]]: The [[femme]] are at the park.,0.7232513427734375,1.0,2.0,1
+321,[[[[Premise]]]]: A man of the cloth puts a black substance on a man's forehead.<SPLIT>[[[[Hypothesis]]]]: The men are at [[vestments]].,0.7831535935401917,0.0,1.0,1
+322,[[[[Premise]]]]: A person rolls down a hill riding a wagon as another watches.<SPLIT>[[[[Hypothesis]]]]: Two people are [[foreign]].,0.7555893063545227,1.0,0.0,1
+323,[[[[Premise]]]]: A person rolls down a hill riding a wagon as another watches.<SPLIT>[[[[Hypothesis]]]]: A person [[bemused]] at an empty [[mounted]].,0.7194917798042297,1.0,2.0,1
+324,[[[[Premise]]]]: A person rolls down a hill riding a wagon as another watches.<SPLIT>[[[[Hypothesis]]]]: A [[enfant]] in a wagon rolls down a hill.,0.8845152854919434,0.0,1.0,1
+325,[[[[Premise]]]]: a boy holding onto the wall of an old brick house's raised foundation.<SPLIT>[[[[Hypothesis]]]]: a boy holding onto the wall of an old brick house's raised [[basis]] as construction occurs,0.5916253328323364,0.0,1.0,1
+326,[[[[Premise]]]]: a boy holding onto the wall of an old brick house's raised foundation.<SPLIT>[[[[Hypothesis]]]]: a [[fille]] is leaning against the wall,0.8419572710990906,0.0,2.0,1
+327,[[[[Premise]]]]: a boy holding onto the wall of an old brick house's raised foundation.<SPLIT>[[[[Hypothesis]]]]: a boy is against the [[mural]] of a raised foundation,0.7138522267341614,1.0,0.0,1
+328,"[[[[Premise]]]]: Bruce Springsteen, with one arm outstretched, is singing in the spotlight in a dark concert hall.<SPLIT>[[[[Hypothesis]]]]: Bruce [[Skynyrd]] is from Florida.",0.6586984395980835,2.0,1.0,1
+329,"[[[[Premise]]]]: Bruce Springsteen, with one arm outstretched, is singing in the spotlight in a dark concert hall.<SPLIT>[[[[Hypothesis]]]]: Bruce Springsteen is a [[singers]].",0.7364195585250854,1.0,0.0,1
+330,"[[[[Premise]]]]: Bruce Springsteen, with one arm outstretched, is singing in the spotlight in a dark concert hall.<SPLIT>[[[[Hypothesis]]]]: Bruce Springsteen is [[homos]]",0.6276419162750244,2.0,1.0,1
+331,[[[[Premise]]]]: Six dogs swimming in a river.<SPLIT>[[[[Hypothesis]]]]: Six [[poodles]] are outdoors.,0.9300197958946228,1.0,0.0,1
+332,[[[[Premise]]]]: Six dogs swimming in a river.<SPLIT>[[[[Hypothesis]]]]: [[Both]] puppies are setting on the [[roasted]].,0.6065846681594849,1.0,2.0,1
+333,[[[[Premise]]]]: A man and woman are taking a picture of themselves while a woman in a scarf walks by them.<SPLIT>[[[[Hypothesis]]]]: A man and woman have mug shots taken because they have been [[apprehended]].,0.7591017484664917,1.0,2.0,1
+334,[[[[Premise]]]]: A man and woman are taking a picture of themselves while a woman in a scarf walks by them.<SPLIT>[[[[Hypothesis]]]]: A man and woman take selfies while a woman walks by and [[magistrate]] them.,0.6215783357620239,0.0,1.0,1
+335,[[[[Premise]]]]: A man and woman are taking a picture of themselves while a woman in a scarf walks by them.<SPLIT>[[[[Hypothesis]]]]: A [[fella]] and woman take selfies of themselves.,0.8856863975524902,1.0,0.0,1
+336,[[[[Premise]]]]: a group of people dancing together.<SPLIT>[[[[Hypothesis]]]]: People are [[ballets]].,0.981127142906189,1.0,0.0,1
+337,[[[[Premise]]]]: a group of people dancing together.<SPLIT>[[[[Hypothesis]]]]: They are doing the [[merengue]].,0.6729795932769775,2.0,1.0,1
+338,[[[[Premise]]]]: a group of people dancing together.<SPLIT>[[[[Hypothesis]]]]: [[Any]] one is [[choreographed]].,0.8087029457092285,0.0,2.0,1
+339,[[[[Premise]]]]: Men wearing blue uniforms sit on a bus.<SPLIT>[[[[Hypothesis]]]]: Men sit on the [[coach]].,0.9945132732391356,2.0,0.0,1
+340,"[[[[Premise]]]]: Men wearing blue uniforms sit on a bus.<SPLIT>[[[[Hypothesis]]]]: Men sit on the [[coach]] going to work,",0.6282920837402344,2.0,1.0,1
+341,[[[[Premise]]]]: Men wearing blue uniforms sit on a bus.<SPLIT>[[[[Hypothesis]]]]: Men [[conducting]] the bus into the [[seas]].,0.7708072662353516,1.0,2.0,1
+342,[[[[Premise]]]]: Two men climbing on a wooden scaffold.<SPLIT>[[[[Hypothesis]]]]: Two [[burgers]] climbing on a wooden scaffold.,0.9953068494796752,2.0,0.0,1
+343,[[[[Premise]]]]: Two men climbing on a wooden scaffold.<SPLIT>[[[[Hypothesis]]]]: Two [[damsel]] climbing on a wooden scaffold.,0.9729597568511964,1.0,2.0,1
