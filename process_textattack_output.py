@@ -2,7 +2,7 @@ import pandas as pd
 import argparse
 import json
 
-TEXT_KEYS = ['premise', 'hypothesis']  # keys used in the text input
+TEXT_KEYS = ['Premise', 'Hypothesis']  # keys used in the text input
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
@@ -15,7 +15,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     # load the textattack output csv as a dataframe
-    df = pd.read_csv(args.textattack_file)
+    df = pd.read_csv(args.textattack_csv)
 
     # query the successful attacks
     attacked_df = df.loc[df["result_type"] == "Successful"]
@@ -27,25 +27,24 @@ if __name__ == "__main__":
     # rename columns
     original_df = original_df.rename(columns={"original_text": "text", "original_score": "score", "original_output": "output"})
     perturbed_df = perturbed_df.rename(columns={"perturbed_text": "text", "perturbed_score": "score", "perturbed_output": "output"})
-    original_df['attacked'] = 0  # set unmodified text as 0
-    perturbed_df['attacked'] = 1  # set perturbed text as 1
+    original_df['label'] = 0  # set unmodified text as 0
+    perturbed_df['label'] = 1  # set perturbed text as 1
 
     # combine dataframes
     combined_df = pd.concat([original_df, perturbed_df], ignore_index=True)
 
     # Process text columns
     if args.process_text_split:
-        # split according to <split> token
-        combined_df[TEXT_KEYS] = combined_df.text.str.split('<SPLIT>', len(TEXT_KEYS) - 1, expand=True)
+        # remove square brackets and replace <split> token with [sep]
+        combined_df['text'] = combined_df['text'].str.replace('[[', '', regex=False).str.replace(']]', '', regex=False).str.replace('<SPLIT>', ' [SEP] ', regex=False)
 
         for p_text_key in TEXT_KEYS:
-            # grab text after the key
-            combined_df[p_text_key] = combined_df[p_text_key].str.split(': ', 1, expand=True)[1]
-            # remove extra brackets
-            combined_df[p_text_key] = combined_df[p_text_key].str.replace('[[', '', regex=False).str.replace(']]', '', regex=False)
+            # grab text without the key
+            combined_df['text'] = combined_df['text'].str.replace(p_text_key + ': ', '', regex=False)
 
     # pull out the dataframe of info to save
-    json_df = combined_df[TEXT_KEYS + ["score", "output", "ground_truth_output", "attacked"]]
+    json_df = combined_df[["text", "score", "output", "ground_truth_output", "label"]]
+    json_df['ex_id'] = json_df.index
 
     # create the JSON string
     result = json_df.to_json(orient="records")
@@ -62,3 +61,9 @@ if __name__ == "__main__":
             json.dump(result, outfile)
 
     print("Conversion complete. File saved at: ", args.save_filepath)
+
+    # count maximum words
+    count = json_df['text'].str.split().str.len()
+    count.index = count.index.astype(str) + ' words:'
+    count.sort_index(inplace=True)
+    print(count)
