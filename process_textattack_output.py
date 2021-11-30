@@ -32,6 +32,7 @@ if __name__ == "__main__":
 
     # combine dataframes
     combined_df = pd.concat([original_df, perturbed_df], ignore_index=True)
+    combined_df['text'] = combined_df['text'].str.replace('[[', '', regex=False).str.replace(']]', '', regex=False)
 
     # Process text columns
     if args.process_text_split:
