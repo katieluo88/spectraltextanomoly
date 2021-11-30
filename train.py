@@ -24,7 +24,7 @@ from transformers import get_scheduler
 from transformers import BertTokenizer
 from transformers import AdamW
 
-from model import SpectralClassifier, MLPClassifier
+from model import SpectralClassifier, MLPClassifier, DCTClassifier
 
 logging.basicConfig(format='%(asctime)s - %(levelname)s - %(name)s - %(message)s',
                     datefmt='%m/%d/%Y %H:%M:%S',
@@ -180,7 +180,7 @@ def classify(args, model, classifier, device, eval_dataloader):
         labels = labels.to(device)
         with torch.no_grad():
             output = model(input_ids=input_ids, attention_mask=input_mask)
-            probs = classifier(output)
+            probs = classifier(output, input_mask)
         preds = torch.argmax(probs, dim=1).view(-1)
         all_predictions.extend(preds.tolist())
         for i in range(preds.shape[0]):
@@ -312,6 +312,9 @@ def main(args):
             elif args.classifier == 'spectral':
                 classifier = SpectralClassifier(embed_dim=model.config.hidden_size,
                                                 filter=args.filter)
+            elif args.classifier == 'dct':
+                classifier = DCTClassifier(embed_dim=model.config.hidden_size,
+                                           max_seq_len=args.max_seq_length)
 
             model.to(device)
             model.eval()
@@ -369,7 +372,7 @@ def main(args):
 
                     input_ids, attention_mask, labels = batch
                     output = model(input_ids=input_ids, attention_mask=attention_mask)
-                    probs = classifier(output)
+                    probs = classifier(output, attention_mask)
                     loss = loss_fn(probs, labels)
 
                     if n_gpu > 1:
@@ -523,7 +526,7 @@ if __name__ == "__main__":
     parser.add_argument("--classifier",
                         default=None,
                         type=str,
-                        choices=['mlp', 'spectral'],
+                        choices=['mlp', 'spectral', 'dct'],
                         required=True)
     parser.add_argument("--filter", default=None, type=str)
     parser.add_argument(
