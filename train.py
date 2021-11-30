@@ -313,7 +313,8 @@ def main(args):
                 classifier = SpectralClassifier(embed_dim=model.config.hidden_size,
                                                 filter=args.filter)
             elif args.classifier == 'dct':
-                classifier = DCTClassifier(embed_dim=model.config.hidden_size)
+                classifier = DCTClassifier(embed_dim=model.config.hidden_size,
+                                           max_seq_len=args.max_seq_length)
 
             model.to(device)
             model.eval()
