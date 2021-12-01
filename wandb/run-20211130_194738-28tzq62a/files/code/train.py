@@ -224,15 +224,6 @@ def main(args):
             args.train_file = 'data/textfooler-bert-base-uncased-ag-news/train.jsonl'
             args.dev_file = 'data/textfooler-bert-base-uncased-ag-news/val.jsonl'
             args.test_file = 'data/textfooler-bert-base-uncased-ag-news/test.jsonl'
-        elif args.dataset == 'imdb':
-            args.train_file = 'data/textfooler-bert-base-uncased-mr/train.jsonl'
-            args.dev_file = 'data/textfooler-bert-base-uncased-mr/val.jsonl'
-            args.test_file = 'data/textfooler-bert-base-uncased-mr/test.jsonl'
-    elif args.attack == 'clara':
-        if args.dataset == 'imdb':
-            args.train_file = 'data/clara-bert-base-uncased-mr/train.jsonl'
-            args.dev_file = 'data/clara-bert-base-uncased-mr/val.jsonl'
-            args.test_file = 'data/clara-bert-base-uncased-mr/test.jsonl'
 
     # argparse checkers
     if not args.do_train and not args.do_eval:
@@ -406,29 +397,30 @@ def main(args):
                         optimizer.zero_grad()
                         global_step += 1
 
-                    if args.wandb and (step + 1) % 25 == 0:
+                    if args.wandb and (global_step + 1) % 25 == 0:
                         correct = torch.sum(torch.argmax(probs, dim=1).view(-1) == labels).item()
                         acc = 1.0 * correct / labels.size(0)
                         wandb.log({
-                            '(Train) batch loss': loss.item(),
+                            '(Train) loss': loss.item(),
                             '(Train) batch acc': acc,
                         },
                                   step=global_step)
 
-                    if (step + 1) % eval_step == 0:
+                    if (step + 1) % eval_step == 0 or step + 1 == len(train_batches):
                         logger.info(
                             'Epoch: {}, Step: {} / {}, used_time = {:.2f}s, loss = {:.6f}'.format(
                                 epoch, step + 1, len(train_batches),
                                 time.time() - start_time, tr_loss / nb_tr_steps))
+
+                        if args.wandb:
+                            wandb.log({'(Train) loss': loss.item()}, step=global_step)
 
                         save_model = False
                         if args.do_eval:
                             result, __ = classify(args, model, classifier, device, eval_dataloader)
                             classifier.train()
                             if args.wandb:
-                                wandb.log({'(Dev) ' + k: v
-                                           for k, v in result.items()},
-                                          step=global_step)
+                                wandb.log(result, step=global_step)
                             result['global_step'] = global_step
                             result['epoch'] = epoch
                             result['learning_rate'] = lr
@@ -449,6 +441,7 @@ def main(args):
                             # case: no evaluation so just save the latest model
                             save_model = True
                         if save_model:
+                            # NOTE changed
                             # # save the config
                             # model.config.to_json_file(os.path.join(args.output_dir, 'config.json'))
                             # save the model
@@ -483,6 +476,15 @@ def main(args):
                             torch.save(checkpoint, filename)
 
     if args.eval_test:
+        if args.wandb:
+            wandb.init(
+                project='spectral',
+                name=
+                f'{args.model}_{args.test_file}_{args.initialize_model_from_checkpoint}_{args.output_dir}',
+                tags=['eval'],
+                notes=args.notes,
+                config=vars(args))
+
         # eval_dataset = get_data(args.test_file)
         eval_examples = read_examples(input_file=args.test_file, is_training=False)
         eval_features = convert_examples_to_features(examples=eval_examples,
@@ -527,7 +529,7 @@ def main(args):
                 writer.write("%s = %s\n" % (key, str(result[key])))
 
         if args.wandb:
-            wandb.log({'(Test) ' + k: v for k, v in result.items()}, step=global_step + 1)
+            wandb.log(result, step=0)
 
 
 if __name__ == "__main__":

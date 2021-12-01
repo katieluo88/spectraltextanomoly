@@ -1,0 +1,125 @@
+diff --git a/scripts/ge_testing.sub b/scripts/ge_testing.sub
+index daa11f7..32b19d0 100644
+--- a/scripts/ge_testing.sub
++++ b/scripts/ge_testing.sub
+@@ -12,4 +12,8 @@
+ source ~/anaconda3/etc/profile.d/conda.sh
+ conda activate pqa
+ cd /home/gg462/spectraltextanomoly
+-PYTHONPATH=$(pwd) python train.py --notes '' --do_train --do_eval --model 'bert-base-uncased' --classifier 'mlp' --train_file 'data/textfooler-distilbert-base-cased-snli.jsonl' --dev_file 'data/textfooler-distilbert-base-cased-snli.jsonl' --seed 46 --eval_metric f1 --num_train_epochs 3 --eval_per_epoch 3 --output_dir .experiment --scheduler constant --train_batch_size 40 --eval_batch_size 10 --gradient_accumulation_steps 4  --learning_rate 1e-3
+\ No newline at end of file
++PYTHONPATH=$(pwd) python train.py --notes '' --do_train --do_eval --eval_test --model 'bert-base-uncased' --classifier 'mlp' --train_file 'data/textfooler-bert-base-uncased-ag-news/train.jsonl' --dev_file 'data/textfooler-bert-base-uncased-ag-news/val.jsonl' --test_file 'data/textfooler-bert-base-uncased-ag-news/test.jsonl' --seed 46 --eval_metric f1 --num_train_epochs 2 --eval_per_epoch 2 --output_dir .experiment --scheduler constant --train_batch_size 40 --eval_batch_size 10 --gradient_accumulation_steps 4  --learning_rate 1e-3
++
++python train.py --wandb --notes '' --do_train --do_eval --eval_test --model 'bert-base-uncased' --classifier 'mlp' --train_file 'data/textfooler-distilbert-base-cased-snli.jsonl' --dev_file 'data/textfooler-distilbert-base-cased-snli.jsonl' --test_file 'data/textfooler-distilbert-base-cased-snli.jsonl' --seed 46 --eval_metric f1 --num_train_epochs 1 --eval_per_epoch 2 --output_dir .experiment --scheduler constant --train_batch_size 40 --eval_batch_size 10 --gradient_accumulation_steps 4  --learning_rate 1e-3
++
++python train.py --notes '' --do_train --do_eval --eval_test --model 'bert-base-uncased' --classifier 'mlp' --attack 'textfooler' --dataset 'snli' --seed 46 --eval_metric f1 --num_train_epochs 1 --eval_per_epoch 2 --output_dir .experiment --scheduler constant --train_batch_size 40 --eval_batch_size 10 --gradient_accumulation_steps 4  --learning_rate 1e-3
+\ No newline at end of file
+diff --git a/train.py b/train.py
+index 3558751..7021975 100644
+--- a/train.py
++++ b/train.py
+@@ -219,6 +219,12 @@ def main(args):
+     args.train_batch_size = \
+         args.train_batch_size // args.gradient_accumulation_steps
+ 
++    if args.attack == 'textfooler':
++        if args.dataset == 'agnews':
++            args.train_file = 'data/textfooler-bert-base-uncased-ag-news/train.jsonl'
++            args.dev_file = 'data/textfooler-bert-base-uncased-ag-news/val.jsonl'
++            args.test_file = 'data/textfooler-bert-base-uncased-ag-news/test.jsonl'
++
+     # argparse checkers
+     if not args.do_train and not args.do_eval:
+         raise ValueError("At least one of `do_train` or `do_eval` must be True.")
+@@ -348,7 +354,7 @@ def main(args):
+                 wandb.init(
+                     project='spectral',
+                     name=
+-                    f'{args.train_num_orig_ex}{args.dataset}_{args.model}_{args.scheduler}={lr}_{args.initialize_model_from_checkpoint}_{args.output_dir}',
++                    f'{args.train_num_orig_ex}{args.dataset}_{args.attack}_{args.model}_{args.classifier}_lr={lr}_seed={args.seed}_{args.output_dir}',
+                     notes=args.notes,
+                     config=vars(args))
+                 wandb.watch(model)
+@@ -436,8 +442,8 @@ def main(args):
+                             save_model = True
+                         if save_model:
+                             # NOTE changed
+-                            # save the config
+-                            model.config.to_json_file(os.path.join(args.output_dir, 'config.json'))
++                            # # save the config
++                            # model.config.to_json_file(os.path.join(args.output_dir, 'config.json'))
+                             # save the model
+                             torch.save(
+                                 {
+@@ -454,7 +460,7 @@ def main(args):
+                                 with open(os.path.join(args.output_dir, filename), "w") as writer:
+                                     for key in sorted(best_result.keys()):
+                                         writer.write("%s = %s\n" % (key, str(best_result[key])))
+-                        # save checkpoint
++                        # save every check checkpoint
+                         if args.save_checkpoint:
+                             checkpoint = {
+                                 'global_step': global_step,
+@@ -497,21 +503,27 @@ def main(args):
+         eval_data = TensorDataset(all_input_ids, all_input_mask, all_labels, all_ex_ids)
+         eval_dataloader = DataLoader(eval_data, batch_size=args.eval_batch_size)
+ 
+-        # NOTE change: only evaluate on the test set
+-        if not args.do_train:
+-            model = BertModel.from_pretrained(args.model)
+-            if args.classifier == 'mlp':
+-                classifier = MLPClassifier(embed_dim=model.config.hidden_size)
+-            elif args.classifier == 'spectral':
+-                classifier = SpectralClassifier(embed_dim=model.config.hidden_size,
+-                                                filter=args.filter)
+-            model.to(device)
+-            classifier.to(device)
++        # # NOTE change: only evaluate on the test set
++        # if not args.do_train:
++        #     model = BertModel.from_pretrained(args.model)
++        #     if args.classifier == 'mlp':
++        #         classifier = MLPClassifier(embed_dim=model.config.hidden_size)
++        #     elif args.classifier == 'spectral':
++        #         classifier = SpectralClassifier(embed_dim=model.config.hidden_size,
++        #                                         filter=args.filter)
++        #     model.to(device)
++        #     classifier.to(device)
++
++        # load the best classifier saved
++        ckpt = torch.load(os.path.join(args.output_dir, 'saved_checkpoint'))
++        classifier.load_state_dict(ckpt['classifier_state_dict'])
++
+         # result, preds, nbest_preds = evaluate(args, model, device, eval_dataset, eval_dataloader,
+         #                                       eval_examples, eval_features)
+-        result, all_preds = classify()
++        result, all_preds = classify(args, model, classifier, device, eval_dataloader)
++        predictions = [x for x in zip(all_ex_ids.tolist(), all_preds)]
+         with open(os.path.join(args.output_dir, PRED_FILE), "w") as writer:
+-            writer.write(json.dumps(all_preds, indent=4) + "\n")
++            writer.write(json.dumps(predictions, indent=4) + "\n")
+         with open(os.path.join(args.output_dir, TEST_FILE), "w") as writer:
+             for key in sorted(result.keys()):
+                 writer.write("%s = %s\n" % (key, str(result[key])))
+@@ -528,17 +540,15 @@ if __name__ == "__main__":
+                         type=str,
+                         choices=['mlp', 'spectral', 'dct'],
+                         required=True)
+-    parser.add_argument("--filter", default=None, type=str)
++    parser.add_argument("--filter", default=None, type=str, choices=['low', 'mid', 'high'])
++    parser.add_argument("--attack", default=None, type=str, choices=['textfooler', 'a2t', 'clara'])
++    parser.add_argument("--dataset", default=None, type=str, choices=['snli', 'agnews', 'imdb'])
+     parser.add_argument(
+         "--output_dir",
+-        default=None,
++        default='.experiment',
+         type=str,
+-        required=True,
+         help="The output directory where the model checkpoints and predictions will be written.")
+-    parser.add_argument(
+-        "--train_file",
+-        default='spectraltextanomoly/data/textfooler-distilbert-base-cased-snli.jsonl',
+-        type=str)
++    parser.add_argument("--train_file", default=None, type=str)
+     parser.add_argument("--dev_file", default=None, type=str)
+     parser.add_argument("--test_file", default=None, type=str)
+     parser.add_argument("--eval_per_epoch",

@@ -224,15 +224,6 @@ def main(args):
             args.train_file = 'data/textfooler-bert-base-uncased-ag-news/train.jsonl'
             args.dev_file = 'data/textfooler-bert-base-uncased-ag-news/val.jsonl'
             args.test_file = 'data/textfooler-bert-base-uncased-ag-news/test.jsonl'
-        elif args.dataset == 'imdb':
-            args.train_file = 'data/textfooler-bert-base-uncased-mr/train.jsonl'
-            args.dev_file = 'data/textfooler-bert-base-uncased-mr/val.jsonl'
-            args.test_file = 'data/textfooler-bert-base-uncased-mr/test.jsonl'
-    elif args.attack == 'clara':
-        if args.dataset == 'imdb':
-            args.train_file = 'data/clara-bert-base-uncased-mr/train.jsonl'
-            args.dev_file = 'data/clara-bert-base-uncased-mr/val.jsonl'
-            args.test_file = 'data/clara-bert-base-uncased-mr/test.jsonl'
 
     # argparse checkers
     if not args.do_train and not args.do_eval:
@@ -410,16 +401,19 @@ def main(args):
                         correct = torch.sum(torch.argmax(probs, dim=1).view(-1) == labels).item()
                         acc = 1.0 * correct / labels.size(0)
                         wandb.log({
-                            '(Train) batch loss': loss.item(),
+                            '(Train) loss': loss.item(),
                             '(Train) batch acc': acc,
                         },
                                   step=global_step)
 
-                    if (step + 1) % eval_step == 0:
+                    if (step + 1) % eval_step == 0 or step + 1 == len(train_batches):
                         logger.info(
                             'Epoch: {}, Step: {} / {}, used_time = {:.2f}s, loss = {:.6f}'.format(
                                 epoch, step + 1, len(train_batches),
                                 time.time() - start_time, tr_loss / nb_tr_steps))
+
+                        if args.wandb:
+                            wandb.log({'(Train) loss': loss.item()}, step=global_step)
 
                         save_model = False
                         if args.do_eval:

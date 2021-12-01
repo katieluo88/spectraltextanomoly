@@ -12,4 +12,8 @@
 source ~/anaconda3/etc/profile.d/conda.sh
 conda activate pqa
 cd /home/gg462/spectraltextanomoly
-PYTHONPATH=$(pwd) python train.py --notes '' --do_train --do_eval --model 'bert-base-uncased' --classifier 'mlp' --train_file 'data/textfooler-distilbert-base-cased-snli.jsonl' --dev_file 'data/textfooler-distilbert-base-cased-snli.jsonl' --seed 46 --eval_metric f1 --num_train_epochs 3 --eval_per_epoch 3 --output_dir .experiment --scheduler constant --train_batch_size 40 --eval_batch_size 10 --gradient_accumulation_steps 4  --learning_rate 1e-3
+PYTHONPATH=$(pwd) python train.py --notes '' --do_train --do_eval --eval_test --model 'bert-base-uncased' --classifier 'mlp' --train_file 'data/textfooler-bert-base-uncased-ag-news/train.jsonl' --dev_file 'data/textfooler-bert-base-uncased-ag-news/val.jsonl' --test_file 'data/textfooler-bert-base-uncased-ag-news/test.jsonl' --seed 46 --eval_metric f1 --num_train_epochs 2 --eval_per_epoch 2 --output_dir .experiment --scheduler constant --train_batch_size 40 --eval_batch_size 10 --gradient_accumulation_steps 4  --learning_rate 1e-3
+
+python train.py --wandb --notes '' --do_train --do_eval --eval_test --model 'bert-base-uncased' --classifier 'mlp' --train_file 'data/textfooler-distilbert-base-cased-snli.jsonl' --dev_file 'data/textfooler-distilbert-base-cased-snli.jsonl' --test_file 'data/textfooler-distilbert-base-cased-snli.jsonl' --seed 46 --eval_metric f1 --num_train_epochs 1 --eval_per_epoch 2 --output_dir .experiment --scheduler constant --train_batch_size 40 --eval_batch_size 10 --gradient_accumulation_steps 4  --learning_rate 1e-3
+
+python train.py --notes '' --do_train --do_eval --eval_test --model 'bert-base-uncased' --classifier 'mlp' --attack 'textfooler' --dataset 'agnews' --seed 46 --eval_metric f1 --num_train_epochs 1 --eval_per_epoch 2 --output_dir .experiment --scheduler constant --train_batch_size 40 --eval_batch_size 10 --gradient_accumulation_steps 4  --learning_rate 1e-3

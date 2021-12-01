@@ -1,0 +1,134 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.11.0
+    code_path: code/train.py
+    framework: huggingface
+    huggingface_version: 4.6.1
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    python_version: 3.9.5
+    t:
+      1:
+      - 1
+      - 11
+      2:
+      - 1
+      - 11
+      3:
+      - 1
+      4: 3.9.5
+      5: 0.11.0
+      6: 4.6.1
+      8:
+      - 5
+attack:
+  desc: null
+  value: null
+classifier:
+  desc: null
+  value: mlp
+dataset:
+  desc: null
+  value: null
+dev_file:
+  desc: null
+  value: data/textfooler-distilbert-base-cased-snli.jsonl
+dev_num_orig_ex:
+  desc: null
+  value: 343
+dev_num_split_ex:
+  desc: null
+  value: 343
+do_eval:
+  desc: null
+  value: true
+do_lower_case:
+  desc: null
+  value: false
+do_train:
+  desc: null
+  value: true
+eval_batch_size:
+  desc: null
+  value: 10
+eval_metric:
+  desc: null
+  value: f1
+eval_per_epoch:
+  desc: null
+  value: 2
+eval_test:
+  desc: null
+  value: true
+filter:
+  desc: null
+  value: null
+gradient_accumulation_steps:
+  desc: null
+  value: 4
+learning_rate:
+  desc: null
+  value: 0.001
+max_seq_length:
+  desc: null
+  value: 128
+model:
+  desc: null
+  value: bert-base-uncased
+n_gpu:
+  desc: null
+  value: 1
+no_cuda:
+  desc: null
+  value: false
+notes:
+  desc: null
+  value: ''
+num_train_epochs:
+  desc: null
+  value: 1.0
+output_dir:
+  desc: null
+  value: .experiment/20211130200047881399
+percentage_train_data:
+  desc: null
+  value: 1
+save_checkpoint:
+  desc: null
+  value: false
+scheduler:
+  desc: null
+  value: constant
+seed:
+  desc: null
+  value: 46
+test_file:
+  desc: null
+  value: data/textfooler-distilbert-base-cased-snli.jsonl
+timestamp:
+  desc: null
+  value: '20211130200047881399'
+train_batch_size:
+  desc: null
+  value: 10
+train_file:
+  desc: null
+  value: data/textfooler-distilbert-base-cased-snli.jsonl
+train_mode:
+  desc: null
+  value: random_sorted
+train_num_orig_ex:
+  desc: null
+  value: 343
+train_num_split_ex:
+  desc: null
+  value: 343
+wandb:
+  desc: null
+  value: true
+warmup_proportion:
+  desc: null
+  value: 0.1
