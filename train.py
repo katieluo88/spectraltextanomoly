@@ -18,7 +18,7 @@ from io import open
 import numpy as np
 import torch
 from torch.utils.data import DataLoader, TensorDataset
-from transformers import DistilBertModel, BertModel
+from transformers import BertModel
 from transformers import get_scheduler
 
 from transformers import BertTokenizer
@@ -180,7 +180,7 @@ def classify(args, model, classifier, device, eval_dataloader):
         labels = labels.to(device)
         with torch.no_grad():
             output = model(input_ids=input_ids, attention_mask=input_mask)
-            probs = classifier(output, input_mask)
+            probs = classifier(output, input_mask, return_prob=True)
         preds = torch.argmax(probs, dim=1).view(-1)
         all_predictions.extend(preds.tolist())
         for i in range(preds.shape[0]):
@@ -362,11 +362,12 @@ def main(args):
             if args.wandb:
                 wandb.init(
                     project='spectral',
+                    entity="spectral",
                     name=
                     f'{args.train_num_orig_ex}{args.dataset}_{args.attack}_{args.model}_{args.classifier}_lr={lr}_seed={args.seed}_{args.output_dir}',
                     notes=args.notes,
                     config=vars(args))
-                wandb.watch(model)
+                # wandb.watch(model)
 
             tr_loss = 0
             nb_tr_examples = 0
@@ -407,7 +408,8 @@ def main(args):
                         global_step += 1
 
                     if args.wandb and (step + 1) % 25 == 0:
-                        correct = torch.sum(torch.argmax(probs, dim=1).view(-1) == labels).item()
+                        correct = torch.sum(
+                            torch.argmax(probs.softmax(dim=1), dim=1).view(-1) == labels).item()
                         acc = 1.0 * correct / labels.size(0)
                         wandb.log({
                             '(Train) batch loss': loss.item(),
@@ -591,7 +593,7 @@ if __name__ == "__main__":
                         type=str)
     parser.add_argument("--train_mode",
                         type=str,
-                        default='random_sorted',
+                        default='random',
                         choices=['random', 'sorted', 'random_sorted'])
     parser.add_argument(
         "--warmup_proportion",
