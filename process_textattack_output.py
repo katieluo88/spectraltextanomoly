@@ -96,3 +96,4 @@ if __name__ == "__main__":
     count.sort_index(inplace=True)
     print(count)
     print("Maximum length in words:", count.max())
+    print("Average length in words:", count.mean())
