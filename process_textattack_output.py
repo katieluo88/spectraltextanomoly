@@ -88,6 +88,7 @@ if __name__ == "__main__":
         all_df.append(json_df)
 
         print("Conversion complete. File saved at: ", out_filepath)
+        print("Split", split, "has length", json_df.shape[0])
 
     # count maximum words
     combined_df = pd.concat(all_df, ignore_index=True)
