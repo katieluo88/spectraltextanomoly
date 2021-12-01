@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH -J sq-s                # Job name
-#SBATCH -o /home/gg462/pqa/.output/%j.out                  # Name of stdout output log file (%j expands to jobID)
-#SBATCH -e /home/gg462/pqa/.output/%j.err                  # Name of stderr output log file (%j expands to jobID)
+#SBATCH -o /home/gg462/spectraltextanomoly/.output/%j.out                  # Name of stdout output log file (%j expands to jobID)
+#SBATCH -e /home/gg462/spectraltextanomoly/.output/%j.err                  # Name of stderr output log file (%j expands to jobID)
 #SBATCH -N 1                                 # Total number of nodes requested
 #SBATCH -n 4                                 # Total number of cores requested
 #SBATCH --mem=20000                          # Total amount of (real) memory requested (per node)

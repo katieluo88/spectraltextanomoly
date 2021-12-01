@@ -3,7 +3,6 @@ import torch.nn.functional as F
 import torch
 
 from scipy.fftpack import dct, idct
-import numpy as np
 
 
 # classifier
@@ -15,7 +14,7 @@ class MLPClassifier(nn.Module):
         self.mlp = nn.Sequential(nn.Linear(embed_dim, 256), nn.ReLU(), nn.Linear(256, 64),
                                  nn.ReLU(), nn.Linear(64, 2))
 
-    def forward(self, inputs, attention_mask):
+    def forward(self, inputs, attention_mask, return_prob=False):
         embeds = inputs.last_hidden_state
         embeds_mask = attention_mask.unsqueeze(dim=2).repeat(1, 1, embeds.shape[2])
         embeds[~embeds_mask] = 0
@@ -24,7 +23,9 @@ class MLPClassifier(nn.Module):
         # or torch.max(x,0).values
         vectors = torch.mean(embeds, dim=1)
         outputs = self.mlp(vectors)
-        return F.softmax(outputs, dim=1)
+        if return_prob:
+            return F.softmax(outputs, dim=1)
+        return outputs
 
 
 '''
@@ -59,7 +60,7 @@ class SpectralClassifier(nn.Module):
         idcts = idct(dcts, type=2, axis=1) / 254
         return idcts
 
-    def forward(self, inputs, attention_mask):
+    def forward(self, inputs, attention_mask, return_prob=False):
         embeds = inputs.last_hidden_state
         embeds_mask = attention_mask.unsqueeze(dim=2).repeat(1, 1, embeds.shape[2])
         embeds[~embeds_mask] = 0
@@ -69,7 +70,9 @@ class SpectralClassifier(nn.Module):
         idcts = torch.tensor(idcts).to(attention_mask.device)
         vectors = torch.mean(idcts, dim=1)
         outputs = self.mlp(vectors)
-        return F.softmax(outputs, dim=1)
+        if return_prob:
+            return F.softmax(outputs, dim=1)
+        return outputs
 
 
 class DCTClassifier(nn.Module):
@@ -81,7 +84,7 @@ class DCTClassifier(nn.Module):
         self.mlp = nn.Sequential(nn.Linear(embed_dim, 256), nn.ReLU(), nn.Linear(256, 64),
                                  nn.ReLU(), nn.Linear(64, 2))
 
-    def forward(self, inputs, attention_mask):
+    def forward(self, inputs, attention_mask, return_prob=False):
         embeds = inputs.last_hidden_state
         embeds_mask = attention_mask.unsqueeze(dim=2).repeat(1, 1, embeds.shape[2])
         embeds[~embeds_mask] = 0
@@ -91,4 +94,6 @@ class DCTClassifier(nn.Module):
         print(dcts.shape)
         vectors = self.projection(torch.transpose(dcts, 1, 2)).squeeze(dim=2)
         outputs = self.mlp(vectors)
-        return F.softmax(outputs, dim=1)
+        if return_prob:
+            return F.softmax(outputs, dim=1)
+        return outputs

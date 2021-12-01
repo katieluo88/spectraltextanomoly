@@ -2,7 +2,7 @@ logs/
 .ipynb_checkpoints/
 .output/
 .experiment/
-.wandb/
+wandb/
 
 **.pyc
 **.pkl
