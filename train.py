@@ -237,7 +237,7 @@ def main(args):
             args.train_file = 'data/clara-bert-base-uncased-mr/train.jsonl'
             args.dev_file = 'data/clara-bert-base-uncased-mr/val.jsonl'
             args.test_file = 'data/clara-bert-base-uncased-mr/test.jsonl'
-    elif args.attach == 'a2t':
+    elif args.attack == 'a2t':
         if args.dataset == 'agnews':
             args.train_file = 'data/a2t-bert-base-uncased-ag-news/train.jsonl'
             args.dev_file = 'data/a2t-bert-base-uncased-ag-news/val.jsonl'
