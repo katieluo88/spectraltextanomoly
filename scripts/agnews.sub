@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH -J 1e-4mlp                # Job name
+#SBATCH -J mlp                # Job name
 #SBATCH -o /home/gg462/spectraltextanomoly/.output/%j.out                  # Name of stdout output log file (%j expands to jobID)
 #SBATCH -e /home/gg462/spectraltextanomoly/.output/%j.err                  # Name of stderr output log file (%j expands to jobID)
 #SBATCH -N 1                                 # Total number of nodes requested
@@ -12,4 +12,4 @@
 source ~/anaconda3/etc/profile.d/conda.sh
 conda activate pqa
 cd /home/gg462/spectraltextanomoly
-PYTHONPATH=$(pwd) python train.py --wandb --notes 'testing' --do_train --do_eval --eval_test --model 'bert-base-uncased' --classifier 'spectral' --filter 'low' --attack 'textfooler' --dataset 'agnews' --seed 46 --eval_metric f1 --num_train_epochs 10 --eval_per_epoch 4 --train_batch_size 32 --eval_batch_size 32 --gradient_accumulation_steps 1  --learning_rate 1e-4
+PYTHONPATH=$(pwd) python train.py --wandb --notes 'exp' --do_train --do_eval --eval_test --model 'bert-base-uncased' --classifier 'spectral' --filter 'high' --attack 'textfooler' --dataset 'agnews' --seed 46 --eval_metric f1 --num_train_epochs 10 --eval_per_epoch 4 --train_batch_size 32 --eval_batch_size 32 --gradient_accumulation_steps 1  --learning_rate 1e-4

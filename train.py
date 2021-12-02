@@ -237,6 +237,23 @@ def main(args):
             args.train_file = 'data/clara-bert-base-uncased-mr/train.jsonl'
             args.dev_file = 'data/clara-bert-base-uncased-mr/val.jsonl'
             args.test_file = 'data/clara-bert-base-uncased-mr/test.jsonl'
+    elif args.attach == 'a2t':
+        if args.dataset == 'agnews':
+            args.train_file = 'data/a2t-bert-base-uncased-ag-news/train.jsonl'
+            args.dev_file = 'data/a2t-bert-base-uncased-ag-news/val.jsonl'
+            args.test_file = 'data/a2t-bert-base-uncased-ag-news/test.jsonl'
+        elif args.dataset == 'rt':
+            args.train_file = 'data/a2t-bert-base-uncased-mr/train.jsonl'
+            args.dev_file = 'data/a2t-bert-base-uncased-mr/val.jsonl'
+            args.test_file = 'data/a2t-bert-base-uncased-mr/test.jsonl'
+        elif args.dataset == 'snli':
+            args.train_file = 'data/a2t-bert-base-uncased-snli/train.jsonl'
+            args.dev_file = 'data/a2t-bert-base-uncased-snli/val.jsonl'
+            args.test_file = 'data/a2t-bert-base-uncased-snli/test.jsonl'
+        elif args.dataset == 'imdb':
+            args.train_file = 'data/a2t-bert-base-uncased-imdb/train.jsonl'
+            args.dev_file = 'data/a2t-bert-base-uncased-imdb/val.jsonl'
+            args.test_file = 'data/a2t-bert-base-uncased-imdb/test.jsonl'
 
     if args.dataset == 'agnews':
         args.max_seq_length = 154
