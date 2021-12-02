@@ -425,7 +425,8 @@ def main(args):
 
                         save_model = False
                         if args.do_eval:
-                            result, __ = classify(args, model, classifier, device, eval_dataloader)
+                            result, all_preds = classify(args, model, classifier, device,
+                                                         eval_dataloader)
                             classifier.train()
                             if args.wandb:
                                 wandb.log({'(Dev) ' + k: v
@@ -469,6 +470,10 @@ def main(args):
                                 with open(os.path.join(args.output_dir, filename), "w") as writer:
                                     for key in sorted(best_result.keys()):
                                         writer.write("%s = %s\n" % (key, str(best_result[key])))
+                                predictions = [x for x in zip(all_ex_ids.tolist(), all_preds)]
+                                with open(os.path.join(args.output_dir, 'eval_' + PRED_FILE),
+                                          "w") as writer:
+                                    writer.write(json.dumps(predictions, indent=4) + "\n")
                         # save every check checkpoint
                         if args.save_checkpoint:
                             checkpoint = {
@@ -522,7 +527,7 @@ def main(args):
         #                                       eval_examples, eval_features)
         result, all_preds = classify(args, model, classifier, device, eval_dataloader)
         predictions = [x for x in zip(all_ex_ids.tolist(), all_preds)]
-        with open(os.path.join(args.output_dir, PRED_FILE), "w") as writer:
+        with open(os.path.join(args.output_dir, 'test_' + PRED_FILE), "w") as writer:
             writer.write(json.dumps(predictions, indent=4) + "\n")
         with open(os.path.join(args.output_dir, TEST_FILE), "w") as writer:
             for key in sorted(result.keys()):
