@@ -37,6 +37,8 @@ if __name__ == "__main__":
         "test": test
     }
 
+    all_df = []
+
     for split in data_splits.keys():
         print("Processing split:", split)
         attacked_df = data_splits[split]
@@ -83,11 +85,16 @@ if __name__ == "__main__":
             out_filepath = osp.join(args.save_filepath, split + ".json")
             with open(out_filepath, 'w') as outfile:
                 json.dump(result, outfile)
+        all_df.append(json_df)
 
         print("Conversion complete. File saved at: ", out_filepath)
+        print("Split", split, "has length", json_df.shape[0])
 
     # count maximum words
-    count = json_df['text'].str.split().str.len()
+    combined_df = pd.concat(all_df, ignore_index=True)
+    count = combined_df['text'].str.split().str.len()
     count.index = count.index.astype(str) + ' words:'
     count.sort_index(inplace=True)
     print(count)
+    print("Maximum length in words:", count.max())
+    print("Average length in words:", count.mean())
