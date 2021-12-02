@@ -4,6 +4,7 @@ logs/
 .experiment/
 wandb/
 
+**.log
 **.pyc
 **.pkl
 **.ipynb
