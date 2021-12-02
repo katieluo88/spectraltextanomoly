@@ -224,7 +224,7 @@ def main(args):
             args.train_file = 'data/textfooler-bert-base-uncased-ag-news/train.jsonl'
             args.dev_file = 'data/textfooler-bert-base-uncased-ag-news/val.jsonl'
             args.test_file = 'data/textfooler-bert-base-uncased-ag-news/test.jsonl'
-        elif args.dataset == 'imdb':
+        elif args.dataset == 'rt':
             args.train_file = 'data/textfooler-bert-base-uncased-mr/train.jsonl'
             args.dev_file = 'data/textfooler-bert-base-uncased-mr/val.jsonl'
             args.test_file = 'data/textfooler-bert-base-uncased-mr/test.jsonl'
@@ -233,10 +233,19 @@ def main(args):
             args.dev_file = 'data/textfooler-bert-base-uncased-snli/val.jsonl'
             args.test_file = 'data/textfooler-bert-base-uncased-snli/test.jsonl'
     elif args.attack == 'clara':
-        if args.dataset == 'imdb':
+        if args.dataset == 'rt':
             args.train_file = 'data/clara-bert-base-uncased-mr/train.jsonl'
             args.dev_file = 'data/clara-bert-base-uncased-mr/val.jsonl'
             args.test_file = 'data/clara-bert-base-uncased-mr/test.jsonl'
+
+    if args.dataset == 'agnews':
+        args.max_seq_length = 154
+    elif args.dataset == 'imdb':
+        args.max_seq_length = 512
+    elif args.dataset == 'snli':
+        args.max_seq_length = 84
+    elif args.dataset == 'rt':
+        args.max_seq_length = 64
 
     # argparse checkers
     if not args.do_train and not args.do_eval:
@@ -330,7 +339,8 @@ def main(args):
                 classifier = MLPClassifier(embed_dim=model.config.hidden_size)
             elif args.classifier == 'spectral':
                 classifier = SpectralClassifier(embed_dim=model.config.hidden_size,
-                                                filter=args.filter)
+                                                filter=args.filter,
+                                                max_seq_len=args.max_seq_length)
             elif args.classifier == 'dct':
                 classifier = DCTClassifier(embed_dim=model.config.hidden_size,
                                            max_seq_len=args.max_seq_length)
@@ -551,7 +561,10 @@ if __name__ == "__main__":
                         required=True)
     parser.add_argument("--filter", default=None, type=str, choices=['low', 'mid', 'high'])
     parser.add_argument("--attack", default=None, type=str, choices=['textfooler', 'a2t', 'clara'])
-    parser.add_argument("--dataset", default=None, type=str, choices=['snli', 'agnews', 'imdb'])
+    parser.add_argument("--dataset",
+                        default=None,
+                        type=str,
+                        choices=['snli', 'agnews', 'imdb', 'rt'])
     parser.add_argument(
         "--output_dir",
         default='.experiment',
@@ -633,6 +646,9 @@ if __name__ == "__main__":
                         type=float,
                         default=1,
                         help='Percetage of training data to load: for debugging purpose')
-    parser.add_argument('--scheduler', default='linear', type=str, help='Learning rate scheduler.')
+    parser.add_argument('--scheduler',
+                        default='constant',
+                        type=str,
+                        help='Learning rate scheduler.')
     args = parser.parse_args()
     main(args)

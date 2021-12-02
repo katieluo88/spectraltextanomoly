@@ -1,3 +1,4 @@
+from re import L
 import torch.nn as nn
 import torch.nn.functional as F
 import torch
@@ -39,24 +40,26 @@ class MLPClassifier(nn.Module):
 
 # classifier
 class SpectralClassifier(nn.Module):
-    def __init__(self, embed_dim: int, filter: str):
+    def __init__(self, embed_dim: int, filter: str, max_seq_len: int):
         super(SpectralClassifier, self).__init__()
 
         # sequential: embed dim = 768
         self.mlp = nn.Sequential(nn.Linear(embed_dim, 256), nn.ReLU(), nn.Linear(256, 64),
                                  nn.ReLU(), nn.Linear(64, 2))
+        x = max_seq_len - 1
+        low = int(x / 8)
+        mid = int(x / 2)
         if filter == 'low':
-            self.i, self.j = 0, 8
+            self.i, self.j = 0, low
         elif filter == 'mid':
-            self.i, self.j = 8, 48
+            self.i, self.j = low, mid
         elif filter == 'high':
-            self.i, self.j = 48, 127
+            self.i, self.j = mid, x
 
     def _filter(self, embeds):
         dcts = dct(embeds.cpu().detach().numpy(), type=2, axis=1)
         dcts[:, :self.i, :] = 0
         dcts[:, self.j:, :] = 0
-        # print(dcts[:, self.i:self.j, :])
         idcts = idct(dcts, type=2, axis=1) / 254
         return idcts
 
@@ -91,7 +94,6 @@ class DCTClassifier(nn.Module):
         embeds = inputs.last_hidden_state[:, 1:, :]
         dcts = dct(embeds.cpu().detach().numpy(), type=2, axis=1)
         dcts = torch.tensor(dcts).to(attention_mask.device)
-        print(dcts.shape)
         vectors = self.projection(torch.transpose(dcts, 1, 2)).squeeze(dim=2)
         outputs = self.mlp(vectors)
         if return_prob:
