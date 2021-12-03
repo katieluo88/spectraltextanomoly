@@ -3,6 +3,7 @@ logs/
 .output/
 .experiment/
 wandb/
+experimental_results.csv
 
 **.log
 **.pyc

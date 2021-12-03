@@ -1,0 +1,15 @@
+#!/bin/bash
+#SBATCH -J tf46                # Job name
+#SBATCH -o /home/gg462/spectraltextanomoly/.output/%j.out                  # Name of stdout output log file (%j expands to jobID)
+#SBATCH -e /home/gg462/spectraltextanomoly/.output/%j.err                  # Name of stderr output log file (%j expands to jobID)
+#SBATCH -N 1                                 # Total number of nodes requested
+#SBATCH -n 4                                 # Total number of cores requested
+#SBATCH --mem=12000                          # Total amount of (real) memory requested (per node)
+#SBATCH -t 24:00:00                          # Time limit (hh:mm:ss)
+#SBATCH --partition=default_partition       # Request partition for resource allocation
+#SBATCH --gres=gpu:1                        # Specify a list of generic consumable resources (per node)
+#SBATCH --exclude=sablab-gpu-[01-11],snavely-compute-01,campbell-compute-01,sun-compute-02,scaglione-compute-01,nikola-compute-[12,13],udell-compute-01,marschner-compute-01,kea,klara,joachims-compute-01,g2-cpu-[01-10],davis-compute-01
+source ~/anaconda3/etc/profile.d/conda.sh
+conda activate pqa
+cd /home/gg462/spectraltextanomoly
+PYTHONPATH=$(pwd) python train.py --wandb --notes 'final experiment' --do_train --do_eval --eval_test --model 'bert-base-uncased' --classifier 'dct' --attack 'textfooler' --dataset 'imdb' --seed 46 --eval_metric f1 --num_train_epochs 10 --eval_per_epoch 4 --train_batch_size 32 --eval_batch_size 8 --gradient_accumulation_steps 4 --learning_rate 1e-4
