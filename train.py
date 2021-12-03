@@ -234,9 +234,9 @@ def main(args):
             args.dev_file = 'data/textfooler-bert-base-uncased-snli/val.jsonl'
             args.test_file = 'data/textfooler-bert-base-uncased-snli/test.jsonl'
         elif args.dataset == 'imdb':
-            args.train_file = 'data/a2t-bert-base-uncased-imdb/train.jsonl'
-            args.dev_file = 'data/a2t-bert-base-uncased-imdb/val.jsonl'
-            args.test_file = 'data/a2t-bert-base-uncased-imdb/test.jsonl'
+            args.train_file = 'data/textfooler-bert-base-uncased-imdb/train.jsonl'
+            args.dev_file = 'data/textfooler-bert-base-uncased-imdb/val.jsonl'
+            args.test_file = 'data/textfooler-bert-base-uncased-imdb/test.jsonl'
     elif args.attack == 'clara':
         if args.dataset == 'rt':
             args.train_file = 'data/clara-bert-base-uncased-mr/train.jsonl'

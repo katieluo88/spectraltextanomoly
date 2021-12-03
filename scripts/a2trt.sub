@@ -7,7 +7,7 @@
 #SBATCH --mem=32G                          # Total amount of (real) memory requested (per node)
 #SBATCH -t 24:00:00                          # Time limit (hh:mm:ss)
 #SBATCH --partition=sun        # Request partition for resource allocation
-#SBATCH --gres=gpu:1                        # Specify a list of generic consumable resources (per node)
+#SBATCH --gres=gpu:2080ti:1                        # Specify a list of generic consumable resources (per node)
 source ~/anaconda3/etc/profile.d/conda.sh
 conda activate spectral2
 cd /home/jdc396/spectraltextanomoly
@@ -17,11 +17,11 @@ PYTHONPATH=$(pwd) CUDA_LAUNCH_BLOCKING=1 python train.py --wandb \
     --do_eval \
     --eval_test \
     --model 'bert-base-uncased'\
-    --classifier 'spectral' \
+    --classifier 'dct' \
     --filter 'low' \
     --attack 'a2t' \
     --dataset 'rt' \
-    --seed 46 \
+    --seed 45 \
     --eval_metric f1 \
     --num_train_epochs 10 \
     --eval_per_epoch 4 \

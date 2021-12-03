@@ -17,15 +17,15 @@ PYTHONPATH=$(pwd) CUDA_LAUNCH_BLOCKING=1 python train.py --wandb \
     --do_eval \
     --eval_test \
     --model 'bert-base-uncased'\
-    --classifier 'dct' \
+    --classifier 'mlp' \
     --filter 'low' \
     --attack 'textfooler' \
-    --dataset 'rt' \
-    --seed 45 \
+    --dataset 'imdb' \
+    --seed 46 \
     --eval_metric f1 \
     --num_train_epochs 10 \
     --eval_per_epoch 4 \
-    --train_batch_size 30 \
-    --eval_batch_size 30 \
+    --train_batch_size 10 \
+    --eval_batch_size 10 \
     --gradient_accumulation_steps 1  \
     --learning_rate 1e-4
