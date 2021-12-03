@@ -19,6 +19,10 @@ class MLPClassifier(nn.Module):
         embeds = inputs.last_hidden_state
         embeds_mask = attention_mask.unsqueeze(dim=2).repeat(1, 1, embeds.shape[2])
         embeds[~embeds_mask] = 0
+        # print(embeds.shape)
+        # print(attention_mask.shape)
+        # print(embeds_mask.shape)
+        # print(attention_mask)
         # Remove CLS
         embeds = inputs.last_hidden_state[:, 1:, :]
         # or torch.max(x,0).values
@@ -47,8 +51,8 @@ class SpectralClassifier(nn.Module):
         self.mlp = nn.Sequential(nn.Linear(embed_dim, 256), nn.ReLU(), nn.Linear(256, 64),
                                  nn.ReLU(), nn.Linear(64, 2))
         x = max_seq_len - 1
-        low = int(x / 8)
-        mid = int(x / 2)
+        low = int(x / 16)
+        mid = int(x / 4)
         if filter == 'low':
             self.i, self.j = 0, low
         elif filter == 'mid':
