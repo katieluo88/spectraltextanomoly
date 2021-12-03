@@ -65,6 +65,9 @@ if __name__ == "__main__":
             for p_text_key in TEXT_KEYS:
                 # grab text without the key
                 combined_df['text'] = combined_df['text'].str.replace(p_text_key + ': ', '', regex=False)
+        
+        # FILTER
+        combined_df = combined_df[combined_df['text'].str.split().str.len() <=512]
 
         # pull out the dataframe of info to save
         json_df = combined_df[["text", "score", "output", "ground_truth_output", "label"]]
