@@ -19,6 +19,10 @@ class MLPClassifier(nn.Module):
         embeds = inputs.last_hidden_state
         embeds_mask = attention_mask.unsqueeze(dim=2).repeat(1, 1, embeds.shape[2])
         embeds[~embeds_mask] = 0
+        # print(embeds.shape)
+        # print(attention_mask.shape)
+        # print(embeds_mask.shape)
+        # print(attention_mask)
         # Remove CLS
         embeds = inputs.last_hidden_state[:, 1:, :]
         # or torch.max(x,0).values
