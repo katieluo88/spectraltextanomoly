@@ -47,8 +47,8 @@ class SpectralClassifier(nn.Module):
         self.mlp = nn.Sequential(nn.Linear(embed_dim, 256), nn.ReLU(), nn.Linear(256, 64),
                                  nn.ReLU(), nn.Linear(64, 2))
         x = max_seq_len - 1
-        low = int(x / 8)
-        mid = int(x / 2)
+        low = int(x / 16)
+        mid = int(x / 4)
         if filter == 'low':
             self.i, self.j = 0, low
         elif filter == 'mid':

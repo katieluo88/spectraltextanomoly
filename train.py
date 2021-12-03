@@ -188,11 +188,12 @@ def classify(args, model, classifier, device, eval_dataloader):
     total = torch.sum(matrix.view(-1)).item() * 1.0
     precision = (matrix[1, 1] / torch.sum(matrix[1, :])).item()
     recall = (matrix[1, 1] / torch.sum(matrix[:, 1])).item()
+    f1 = 2*precision*recall /(precision+recall) if not np.isnan(precision) and not np.isnan(recall) and (precision+recall) !=0 else 0.0
     results = {
         'accuracy': (matrix[0, 0] + matrix[1, 1]).item() / total,
         'precision': precision,
         'recall': recall,
-        'f1': 2 * precision * recall / (precision + recall),
+        'f1': f1,
     }
     return results, all_predictions
 
@@ -237,6 +238,19 @@ def main(args):
             args.train_file = 'data/clara-bert-base-uncased-mr/train.jsonl'
             args.dev_file = 'data/clara-bert-base-uncased-mr/val.jsonl'
             args.test_file = 'data/clara-bert-base-uncased-mr/test.jsonl'
+    elif args.attack == 'a2t':
+        if args.dataset == 'agnews':
+            args.train_file = 'data/a2t-bert-base-uncased-ag-news/train.jsonl'
+            args.dev_file = 'data/a2t-bert-base-uncased-ag-news/val.jsonl'
+            args.test_file = 'data/a2t-bert-base-uncased-ag-news/test.jsonl'
+        elif args.dataset == 'rt':
+            args.train_file = 'data/a2t-bert-base-uncased-mr/train.jsonl'
+            args.dev_file = 'data/a2t-bert-base-uncased-mr/val.jsonl'
+            args.test_file = 'data/a2t-bert-base-uncased-mr/test.jsonl'
+        elif args.dataset == 'snli':
+            args.train_file = 'data/a2t-bert-base-uncased-snli/train.jsonl'
+            args.dev_file = 'data/a2t-bert-base-uncased-snli/val.jsonl'
+            args.test_file = 'data/a2t-bert-base-uncased-snli/test.jsonl'
 
     if args.dataset == 'agnews':
         args.max_seq_length = 154
